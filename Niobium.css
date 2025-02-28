@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'opendyslexicregular';
+    src: url('/fonts/opendyslexic-regular-webfont.woff2') format('woff2'),
+    url('/fonts/opendyslexic-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* General Styling */
+body {
+    background-color: #454545;
+    margin: 0;
+    font-family: opendyslexicregular, Arial, sans-serif;
+    text-align: center;
+    font-size: calc(2vw + 1vh);
+    color: white;
+}
+
+/* Vignette Effect */
+.vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+    z-index: -2;
+}
+
+/* Apply Gradient Effect to Specific Elements */
+#Name, #description, #description-two, #description-three,
+#description-four, #description-five, #description-six {
+    background: linear-gradient(rgb(88, 183, 255), rgb(88, 224, 255), rgb(88, 183, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(88, 183, 255, 0.7), 0 0 20px rgba(88, 183, 255, 0.7), 0 0 30px rgba(88, 183, 255, 0.7);
+}
+
+/* Individual Gradient Effects for More Customization */
+#Name {
+    background: linear-gradient(45deg, rgb(102, 0, 255), rgb(0, 0, 255), rgb(63, 0, 255));
+    -webkit-background-clip: text;
+    text-shadow: 0 0 10px rgba(102, 0, 255, 0.7),
+    0 0 20px rgba(0, 0, 255, 0.7),
+    0 0 30px rgba(63, 0, 255, 0.7);
+}
+
+#description, #description-two, #description-three {
+    background: linear-gradient(rgb(255, 255, 255), rgb(184, 180, 180), rgb(170, 170, 170));
+    -webkit-background-clip: text;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 20px rgba(184, 180, 180, 0.7),
+    0 0 30px rgba(170, 170, 170, 0.7);
+}
+
+#description-four, #description-five{
+    background: linear-gradient(rgb(187, 187, 187), rgb(153, 153, 153), rgb(119, 119, 119));
+    -webkit-background-clip: text;
+    text-shadow: 0 0 10px rgba(187, 187, 187, 0.7),
+    0 0 20px rgba(153, 153, 153, 0.7),
+    0 0 30px rgba(119, 119, 119, 0.7);
+}
+
+#description-six {
+    background: linear-gradient(rgb(138, 170, 182), rgb(72, 161, 181), rgb(25, 157, 205));
+    -webkit-background-clip: text;
+    text-shadow: 0 0 10px rgba(138, 170, 182, 0.7),
+    0 0 20px rgba(72, 161, 181, 0.7),
+    0 0 30px rgba(25, 157, 205, 0.7);
+}
+
+h1, h4, h5, h6 {
+    margin: 0;
+}
+
+
+/* Apply Gradient Effect to Specific Elements */
+#youtube, #twitch, #discord, #co-op-cast, #youtubeVods, #instagram, #donations {
+    -webkit-text-fill-color: transparent;
+}
+
+a::before {
+    -webkit-background-clip: text;
+}
+
+/* Button Styling */
+button {
+    font-family: inherit;
+    font-size: 1.2em;
+    background-color: black;
+    border: 5px solid rgb(51, 51, 51);
+    border-radius: 15px;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: black 5px 5px 20px 1px;
+    padding: 10px 15px;
+    text-align: center;
+    min-width: 150px;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+/* Different Gradient for Each Button */
+#youtube span {
+    background: linear-gradient(45deg, rgb(255, 0, 144), rgb(215, 0, 0), rgb(126, 2, 103));
+    -webkit-background-clip: text;
+}
+
+#twitch span {
+    background: linear-gradient(45deg, rgb(131, 58, 180), rgb(231, 29, 253), rgb(179, 69, 252));
+    -webkit-background-clip: text;
+}
+
+#discord span {
+    background: linear-gradient(45deg, rgb(33, 28, 170), rgb(104, 29, 253), rgb(69, 203, 252));
+    -webkit-background-clip: text;
+}
+
+#co-op-cast span {
+    background: linear-gradient(45deg, rgb(33, 28, 170), rgb(104, 29, 253), rgb(69, 203, 252));
+    -webkit-background-clip: text;
+}
+
+#youtubeVods span {
+    background: linear-gradient(45deg, rgb(33, 28, 170), rgb(104, 29, 253), rgb(69, 203, 252));
+    -webkit-background-clip: text;
+}
+
+#instagram span {
+    background: linear-gradient(135deg, rgb(253, 29, 29), rgb(252, 176, 69), rgb(131, 58, 180));
+    -webkit-background-clip: text;
+}
+
+#donations span {
+    background: linear-gradient(45deg, rgb(28, 170, 35), rgb(85, 253, 29), rgb(6, 94, 9));
+    -webkit-background-clip: text;
+}
+
+/* Hover Effect */
+h1:hover, h4:hover, h5:hover, h6:hover, button:hover {
+    transform: rotate(2deg) scale(1.1);
+}
+
+
+/* Links Container */
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.top-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+/* Gradient Animation for Smooth Color Shifting */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/*Apply the Gradient Animation to Text*/
+#youtube span, #twitch span, #discord span,#co-op-cast span, #youtubeVods span, #instagram span, #donations span,
+#Name, #description, #description-two, #description-three,
+#description-four, #description-five, #description-six {
+    background-size: 200% 200%;
+    animation: gradientShift 4s infinite alternate ease-in-out;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
