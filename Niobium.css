@@ -137,10 +137,16 @@ button {
     -webkit-background-clip: text;
 }
 
+#youtube2 span {
+    background: linear-gradient(45deg, rgb(255, 0, 144), rgb(215, 0, 0), rgb(126, 2, 103));
+    -webkit-background-clip: text;
+}
+
 #reddit span {
     background: linear-gradient(45deg, rgb(232, 123, 77), rgb(255, 69, 0), rgb(163, 52, 7));
     -webkit-background-clip: text;
 }
+
 
 /* Hover Effect */
 h1:hover, h4:hover, h5:hover, h6:hover, button:hover {
