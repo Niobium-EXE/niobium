@@ -76,7 +76,7 @@ h1, h4, h5, h6 {
 
 
 /* Apply Gradient Effect to Specific Elements */
-#youtube, #twitch, #discord, #co-op-cast, #youtubeVods, #instagram, #donations, #reddit {
+#youtube, #twitch, #discord, #co-op-cast, #youtubeVods, #instagram, #donations,#youtube2, #reddit {
     -webkit-text-fill-color: transparent;
 }
 
@@ -178,7 +178,7 @@ h1:hover, h4:hover, h5:hover, h6:hover, button:hover {
 }
 
 /*Apply the Gradient Animation to Text*/
-#youtube span, #twitch span, #discord span,#co-op-cast span, #youtubeVods span, #instagram span, #donations span, #reddit span,
+#youtube span, #twitch span, #discord span,#co-op-cast span, #youtubeVods span, #instagram span, #donations span,#youtube2 #reddit span,
 #Name, #description, #description-two, #description-three,
 #description-four, #description-five, #description-six {
     background-size: 200% 200%;
