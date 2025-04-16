@@ -1,110 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>How To use TTS</title>
-    <link rel="stylesheet" href="Niobium.css">
-    <link rel="icon" type="image/png" href="NiobiumIcon.png">
-</head>
-<style>
-    body {
-        font-size: calc(1vw + 1vh) !important;
-    }
-    .lists {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        column-gap: 4vw;
-    }
-</style>
-<body>
-<button>
-    <a href="index.html">Go back home</a>
-</button>
-<h1>How to use TTS!</h1>
-<h2>Just use the chat and it will pick a random voice</h2>
-<h3>Some words trigger sound effects too, list below.</h3>
-<h3>If you would like to use a specific voice put it in square brackets before your message</h3>
-<h4>For example "[Epic Trailer Guy] In a world..."</h4>
-<h6>As of 4/12/25 all voices are from <a href="https://www.elevenlabs.io">eleven labs</a></h6>
-<br>
-<div class="lists">
-    <div class="voices">
-        <p>Voices:</p>
-        <h6>Sarah</h6>
-        <h6>Anika</h6>
-        <h6>TikTok Guy</h6>
-        <h6>Rachel</h6>
-        <h6>Jesus Hernandez</h6>
-        <h6>Harrison</h6>
-        <h6>Santa</h6>
-        <h6>Old Narrator Guy</h6>
-        <h6>Trailer Guy</h6>
-        <h6>Adam</h6>
-        <h6>John Doe</h6>
-        <h6>Spanish Guy</h6>
-        <h6>Infomercial Guy</h6>
-        <h6>Cowboy</h6>
-        <h6>Boston Guy</h6>
-        <h6>Ron</h6>
-        <h6>Frederick Surrey</h6>
-        <h6>British TV</h6>
-        <h6>Radio Guy</h6>
-        <h6>Epic Trailer Guy</h6>
-        <h6>Car Salesman</h6>
-    </div>
-    <div class="sound effects">
-        <p>Sound Effects:</p>
-        <h6>fart</h6>
-        <h6>wow</h6>
-        <h6>bruh</h6>
-        <h6>oh-no, oh no, ohno</h6>
-        <h6>ok, okay</h6>
-        <h6>oof</h6>
-        <h6>order66</h6>
-        <h6>pew</h6>
-        <h6>buzzer</h6>
-        <h6>goal</h6>
-        <h6>point</h6>
-        <h6>snore</h6>
-        <h6>congratulations</h6>
-        <h6>stop it, stop, stop it get some help</h6>
-        <h6>thankyou, thank you, thx,  thanks</h6>
-        <h6>quiet</h6>
-        <h6>are you still there, muted</h6>
-        <h6>goodbye, bye</h6>
-        <h6>hello, hi</h6>
-        <h6>horray, yipee</h6>
-        <h6>im different</h6>
-        <h6>no</h6>
-        <h6>goodnight</h6>
-        <h6>sleep</h6>
-        <h6>stinky</h6>
-        <h6>boom</h6>
-        <h6>we do not care</h6>
-        <h6>dog, what da dog doin</h6>
-        <h6>what</h6>
-        <h6>what bottom text, what bott text, what bot text, what text</h6>
-        <h6>error, err</h6>
-        <h6>shutdown</h6>
-        <h6>startup</h6>
-        <h6>disconnect</h6>
-        <h6>notif</h6>
-        <h6>yeet</h6>
-        <h6>you shall not pass</h6>
-        <h6>banned</h6>
-        <h6>your not that guy pall, your not that  guy, not that guy</h6>
-        <h6>poggies</h6>
-        <h6>mission failed</h6>
-        <h6>aww</h6>
-        <h6>cheer</h6>
-        <h6>oh</h6>
-        <h6>clap</h6>
-        <h6>woah</h6>
-        <h6>wyay</h6>
-        <h6>yay</h6>
-        <h6>D:</h6>
-    </div>
-</div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>How To use TTS</title>
+        <link rel="stylesheet" href="Niobium.css">
+        <link rel="icon" type="image/png" href="NiobiumIcon.png">
+    </head>
+    <style>
+        body {
+            font-size: calc(1vw + 1vh) !important;
+        }
+        .lists {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 10vw;
+        }
+        .sound-effects, .voices {
+            word-wrap: break-word;
+            max-width: 40%;
+            width: 100%;
+        }
+        .sound-effects h6, .voices h6 {
+            border: 5px solid rgb(51, 51, 51);
+            border-radius: 15px;
+            cursor: pointer;
+            /*white-space: nowrap;*/
+            box-shadow: black 5px 5px 20px 1px;
+            padding: 10px 15px;
+            text-align: center;
+            min-width: 150px;
+            transition: transform 0.2s ease-in-out;
+        }
+    </style>
+    <body>
+        <button>
+            <a href="index.html">Go back home</a>
+        </button>
+        <h1>How to use TTS!</h1>
+        <h2>Just use the chat and it will pick a random voice</h2>
+        <h3>Some words trigger sound effects too, list below.</h3>
+        <h6>If you have a sound effect in your message, for example the middle,</h6>
+        <h6>it will play the first part tts, then the sound effect, then the last bits tts.</h6>
+        <h4>If you would like to use a specific voice put it in square brackets before your message</h4>
+        <h5>For example "[Epic Trailer Guy] In a world..."</h5>
+        <h6>As of 4/15/25 all voices are from <a href="https://www.elevenlabs.io">eleven labs</a></h6>
+        <br>
+        <div class="lists">
+            <div class="voices">
+                <p>Voices:</p>
+                <h6 onclick="playSFX('tts-Sarah')">Sarah</h6>
+                <h6 onclick="playSFX('tts-Anika')">Anika</h6>
+                <h6 onclick="playSFX('tts-TikTok Guy')">TikTok Guy</h6>
+                <h6 onclick="playSFX('tts-Rachel')">Rachel</h6>
+                <h6 onclick="playSFX('tts-Jesus Hernandez')">Jesus Hernandez</h6>
+                <h6 onclick="playSFX('tts-Harrison')">Harrison</h6>
+                <h6 onclick="playSFX('tts-Santa')">Santa</h6>
+                <h6 onclick="playSFX('tts-Old Narrator Guy')">Old Narrator Guy</h6>
+                <h6 onclick="playSFX('tts-Trailer Guy')">Trailer Guy</h6>
+                <h6 onclick="playSFX('tts-Adam')">Adam</h6>
+                <h6 onclick="playSFX('tts-John Doe')">John Doe</h6>
+                <h6 onclick="playSFX('tts-Spanish Guy')">Spanish Guy</h6>
+                <h6 onclick="playSFX('tts-Infomercial Guy')">Infomercial Guy</h6>
+                <h6 onclick="playSFX('tts-Cowboy')">Cowboy</h6>
+                <h6 onclick="playSFX('tts-Boston Guy')">Boston Guy</h6>
+                <h6 onclick="playSFX('tts-Ron')">Ron</h6>
+                <h6 onclick="playSFX('tts-Frederick Surrey')">Frederick Surrey</h6>
+                <h6 onclick="playSFX('tts-British TV')">British TV</h6>
+                <h6 onclick="playSFX('tts-Radio Guy')">Radio Guy</h6>
+                <h6 onclick="playSFX('tts-Epic Trailer Guy')">Epic Trailer Guy</h6>
+                <h6 onclick="playSFX('tts-Car Salesman')">Car Salesman</h6>
+                <h6 onclick="playSFX('tts-Grumpy Guy')">Grumpy Guy</h6>
+                <h6 onclick="playSFX('tts-Italian Grandpa')">Italian Grandpa</h6>
+            </div>
+            <div class="sound-effects">
+                <p>Sound Effects:</p>
+                <h6 onclick="playSFX('fart')">fart</h6>
+                <h6 onclick="playSFX('wow')">wow</h6>
+                <h6 onclick="playSFX('bruh')">bruh</h6>
+                <h6 onclick="playSFX('oh-no')">oh-no, oh no, ohno</h6>
+                <h6 onclick="playSFX('ok')">ok, okay</h6>
+                <h6 onclick="playSFX('oof')">oof</h6>
+                <h6 onclick="playSFX('order66')">order66</h6>
+                <h6 onclick="playSFX('pew')">pew</h6>
+                <h6 onclick="playSFX('buzzer')">buzzer</h6>
+                <h6 onclick="playSFX('goal')">goal</h6>
+                <h6 onclick="playSFX('point')">point</h6>
+                <h6 onclick="playSFX('snore')">snore</h6>
+                <h6 onclick="playSFX('congratulations')">congratulations</h6>
+                <h6 onclick="playSFX('stop it')">stop it</h6>
+                <h6 onclick="playSFX('stop it get some help')">stop it get some help</h6>
+                <h6 onclick="playSFX('thankyou')">thankyou, thank you, thx,  thanks</h6>
+                <h6 onclick="playSFX('quiet')">quiet, shh</h6>
+                <h6 onclick="playSFX('are you still there')">are you still there, muted</h6>
+                <h6 onclick="playSFX('goodbye')">goodbye, bye</h6>
+                <h6 onclick="playSFX('hello')">hello, hi</h6>
+                <h6 onclick="playSFX('hooray')">hooray, yipee</h6>
+                <h6 onclick="playSFX('im different')">im different</h6>
+                <h6 onclick="playSFX('no')">no</h6>
+                <h6 onclick="playSFX('goodnight')">goodnight</h6>
+                <h6 onclick="playSFX('sleep')">sleep</h6>
+                <h6 onclick="playSFX('stinky')">stinky</h6>
+                <h6 onclick="playSFX('boom')">boom</h6>
+                <h6 onclick="playSFX('we do not care')">we do not care</h6>
+                <h6 onclick="playSFX('dog')">dog, what da dog doin</h6>
+                <h6 onclick="playSFX('what')">what</h6>
+                <h6 onclick="playSFX('what bottom text')">what bottom text, what bott text, what bot text, what text</h6>
+                <h6 onclick="playSFX('error')">error, err</h6>
+                <h6 onclick="playSFX('shutdown')">shutdown</h6>
+                <h6 onclick="playSFX('startup')">startup</h6>
+                <h6 onclick="playSFX('connect')">connect</h6>
+                <h6 onclick="playSFX('disconnect')">disconnect</h6>
+                <h6 onclick="playSFX('notif')">notif</h6>
+                <h6 onclick="playSFX('yeet')">yeet</h6>
+                <h6 onclick="playSFX('banned')">banned</h6>
+                <h6 onclick="playSFX('your not that guy pall')">your not that guy pall, your not that  guy, not that guy</h6>
+                <h6 onclick="playSFX('poggies')">poggies</h6>
+                <h6 onclick="playSFX('mission failed')">mission failed</h6>
+                <h6 onclick="playSFX('aww')">aww</h6>
+                <h6 onclick="playSFX('cheer')">cheer</h6>
+                <h6 onclick="playSFX('oh')">oh</h6>
+                <h6 onclick="playSFX('clap')">clap</h6>
+                <h6 onclick="playSFX('woah')">woah</h6>
+                <h6 onclick="playSFX('wyay')">wyay</h6>
+                <h6 onclick="playSFX('yay')">yay</h6>
+                <h6 onclick="playSFX('d:')">D:</h6>
+                <h6 onclick="playSFX('sabaping')">sabaping</h6>
+                <h6 onclick="playSFX('pipe')">pipe</h6>
+                <h6 onclick="playSFX('crack')">crack</h6>
+                <h6 onclick="playSFX('smoke detector')">smoke detector, beep</h6>
+                <h6 onclick="playSFX('potion')">potion</h6>
+                <h6 onclick="playSFX('shield')">shield</h6>
+                <h6 onclick="playSFX('xp')">xp</h6>
+                <h6 onclick="playSFX('level up')">level up</h6>
+                <h6 onclick="playSFX('limit on talking')">limit on talking</h6>
+                <h6 onclick="playSFX('get out')">get out</h6>
+                <h6 onclick="playSFX('smasnug')">smasnug, samsung</h6>
+                <h6 onclick="playSFX('run')">run</h6>
+                <h6 onclick="playSFX('rizz')">rizz</h6>
+                <h6 onclick="playSFX('news')">news, new intro</h6>
+                <h6 onclick="playSFX('name is jeff')">(my )name is jeff</h6>
+                <h6 onclick="playSFX('achievement')">achievement</h6>
+                <h6 onclick="playSFX('crickets')">crickets</h6>
+                <h6 onclick="playSFX('water bucket')">water bucket</h6>
+                <h6 onclick="playSFX('boi')">boi</h6>
+                <h6 onclick="playSFX('villager')">villager(s)</h6>
+                <h6 onclick="playSFX('lava chicken')">lava chicken</h6>
+                <h6 onclick="playSFX('i am steve')">I am steve</h6>
+                <h6 onclick="playSFX('chicken jockey')">chicken jockey</h6>
+                <h6 onclick="playSFX('flint and steel')">flint and steel</h6>
+            </div>
+        </div>
+        <script src="sound-effects.js"></script>
+    </body>
 </html>
