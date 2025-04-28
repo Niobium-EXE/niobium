@@ -84,12 +84,14 @@ const sound_effects = {
     "achievement": "minecraft-achievements-sound.mp3",
     "crickets" : "awkward-cricket-sound-effect.mp3",
     "boi": "boi.mp3",
+    "radio guy thanks caller": "Radio-guy-thanks-caller.mp3",
+    "F R F R": "F R R F R.mp3",
     "villagers": "oh-these-dudes-theyre-the-villagers.mp3",
     "lava chicken": "lava chicken song.mp3",
     "i am steve": "i-am-steve.mp3",
     "flint and steel": "flint-and-steel.mp3",
     "chicken jockey": "chicken-jockey.mp3",
-    "water bucket": "water-bucket-release.mp3"
+    "water bucket": "water-bucket-release.mp3",
 }
 
 const sound_effects_map = {
@@ -160,13 +162,15 @@ const sound_effects_map = {
     "name is jeff": "name is jeff",
     "achievement": "achievement",
     "crickets": "crickets",
-    "water bucket": "water bucket",
     "boi": "boi",
+    "radio guy thanks caller": "radio guy thanks caller",
+    "F R F R": "F R R",
     "villager": "villagers",
     "flint and steel": "flint and steel",
     "chicken jockey": "chicken jockey",
     "lava chicken": "lava chicken",
-    "i am steve": "i am steve"
+    "i am steve": "i am steve",
+    "water bucket": "water bucket",
 }
 
 const tts_sounds = {
