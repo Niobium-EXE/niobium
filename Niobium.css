@@ -15,6 +15,7 @@ body {
     text-align: center;
     font-size: calc(1vw + 1vh);
     color: white;
+    overflow-x: hidden;
 }
 
 /* Vignette Effect */
@@ -76,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* Apply Gradient Effect to Specific Elements */
-#youtube, #twitch, #discord, #co-op-cast, #youtubeVods, #instagram, #donations,#youtube2, #reddit {
+#youtube, #twitch, #discord, #co-op-cast, #youtubeVods, #instagram, #donations,#youtube2, #reddit, #spotify {
     -webkit-text-fill-color: transparent;
 }
 
@@ -99,6 +100,12 @@ button {
     min-width: 150px;
     transition: transform 0.2s ease-in-out;
 }
+
+.top-links a {
+    color: white;
+    text-decoration: none;
+}
+
 
 
 /* Different Gradient for Each Button */
@@ -147,6 +154,13 @@ button {
     -webkit-background-clip: text;
 }
 
+#spotify span {
+    background: linear-gradient(45deg, rgb(28, 170, 35), rgb(85, 253, 29), rgb(6, 94, 9));
+    -webkit-background-clip: text;
+    text-shadow: 0 0 10px rgba(28, 170, 35, 0.7),
+    0 0 20px rgba(85, 253, 29, 0.7),
+    0 0 30px rgba(6, 94, 9, 0.7);
+}
 
 /* Hover Effect */
 h1:hover, h4:hover, h5:hover, h6:hover, button:hover {
@@ -178,7 +192,7 @@ h1:hover, h4:hover, h5:hover, h6:hover, button:hover {
 }
 
 /*Apply the Gradient Animation to Text*/
-#youtube span, #twitch span, #discord span,#co-op-cast span, #youtubeVods span, #instagram span, #donations span,#youtube2 #reddit span,
+#youtube span, #twitch span, #discord span, #co-op-cast span, #youtubeVods span, #instagram span, #donations span,#youtube2 span, #reddit span, #spotify span,
 #Name, #description, #description-two, #description-three,
 #description-four, #description-five, #description-six {
     background-size: 200% 200%;
