@@ -92,6 +92,8 @@ const sound_effects = {
     "flint and steel": "flint-and-steel.mp3",
     "chicken jockey": "chicken-jockey.mp3",
     "water bucket": "water-bucket-release.mp3",
+    "nio huh": "Niobium Huh.wav",
+    "i dont really care": "I Don't Really Care Margaret.mp3",
 }
 
 const sound_effects_map = {
@@ -171,6 +173,8 @@ const sound_effects_map = {
     "lava chicken": "lava chicken",
     "i am steve": "i am steve",
     "water bucket": "water bucket",
+    "nioHuh": "nio huh",
+    "idc": "i dont really care margret",
 }
 
 const tts_sounds = {
