@@ -94,6 +94,7 @@ const sound_effects = {
     "water bucket": "water-bucket-release.mp3",
     "nio huh": "Niobium Huh.wav",
     "i dont really care": "I Don't Really Care Margaret.mp3",
+    "the nether": "the-nether-minecraft-movie.mp3",
 }
 
 const sound_effects_map = {
@@ -175,6 +176,7 @@ const sound_effects_map = {
     "water bucket": "water bucket",
     "nioHuh": "nio huh",
     "idc": "i dont really care margret",
+    "the nether": "the nether",
 }
 
 const tts_sounds = {
