@@ -205,6 +205,18 @@ const tts_sounds = {
     "tts-Italian Grandpa": "antonio.mp3",
 }
 
+const edge_tts_sounds = {
+    "edge-tts-Ana": "tts_ana.mp3",
+    "edge-tts-Aria": "tts_aria.mp3",
+    "edge-tts-Christopher": "tts_christopher.mp3",
+    "edge-tts-Eric": "tts_eric.mp3",
+    "edge-tts-Guy": "tts_guy.mp3",
+    "edge-tts-Jenny": "tts_jenny.mp3",
+    "edge-tts-Michelle": "tts_michelle.mp3",
+    "edge-tts-Roger": "tts_roger.mp3",
+    "edge-tts-Steffan": "tts_steffan.mp3",
+}
+
 function randomNumberPlease(numMin, numMax) {
     return Math.floor(Math.random() * (numMax - numMin + 1)) + numMin;
 }
@@ -218,7 +230,16 @@ function playSFX(sound) {
         soundToPlay.play().catch(error => {
             console.log("playback of: ", sound, " located at: ", soundSource, " failed: ", error)
         });
-    } else if (sound === "fart" || sound === "thankyou" || sound === "potion" || sound === "oof" || sound === "goodbye") {
+    }
+    else if (sound.startsWith("edge-tts")) {
+        const soundSource = `edge_tts_previews/${edge_tts_sounds[sound]}`
+        const soundToPlay = new Audio(soundSource);
+        soundToPlay.volume = 1;
+        soundToPlay.play().catch(error => {
+            console.log("playback of: ", sound, " located at: ", soundSource, " failed: ", error)
+        });
+    }
+    else if (sound === "fart" || sound === "thankyou" || sound === "potion" || sound === "oof" || sound === "goodbye") {
         if (sound === "fart") {
             let chance = Math.random() * 100;
             if (chance < 1) {
