@@ -109,7 +109,7 @@ button {
 
 
 /* Different Gradient for Each Button */
-#youtube span {
+#youtube span, #gaming-youtube span {
     background: linear-gradient(45deg, rgb(255, 0, 144), rgb(215, 0, 0), rgb(126, 2, 103));
     -webkit-background-clip: text;
 }
@@ -192,7 +192,7 @@ h1:hover, h4:hover, h5:hover, h6:hover, button:hover {
 }
 
 /*Apply the Gradient Animation to Text*/
-#youtube span, #twitch span, #discord span, #co-op-cast span, #youtubeVods span, #instagram span, #donations span,#youtube2 span, #reddit span, #spotify span,
+#youtube span, #gaming-youtube span, #twitch span, #discord span, #co-op-cast span, #youtubeVods span, #instagram span, #donations span,#youtube2 span, #reddit span, #spotify span,
 #Name, #description, #description-two, #description-three,
 #description-four, #description-five, #description-six {
     background-size: 200% 200%;
