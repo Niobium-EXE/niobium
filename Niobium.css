@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* Apply Gradient Effect to Specific Elements */
-#youtube, #twitch, #discord, #co-op-cast, #youtubeVods, #instagram, #donations,#youtube2, #reddit, #spotify {
+#youtube, #twitch, #discord, #co-op-cast, #youtubeVods, #instagram, #donations,#youtube2, #reddit, #spotify, #twitter {
     -webkit-text-fill-color: transparent;
 }
 
@@ -139,20 +139,20 @@ button {
     -webkit-background-clip: text;
 }
 
-#donations span {
-    background: linear-gradient(45deg, rgb(28, 170, 35), rgb(85, 253, 29), rgb(6, 94, 9));
-    -webkit-background-clip: text;
-}
+/*#donations span {*/
+/*    background: linear-gradient(45deg, rgb(28, 170, 35), rgb(85, 253, 29), rgb(6, 94, 9));*/
+/*    -webkit-background-clip: text;*/
+/*}*/
 
 #youtube2 span {
     background: linear-gradient(45deg, rgb(255, 0, 144), rgb(215, 0, 0), rgb(126, 2, 103));
     -webkit-background-clip: text;
 }
 
-#reddit span {
-    background: linear-gradient(45deg, rgb(232, 123, 77), rgb(255, 69, 0), rgb(163, 52, 7));
-    -webkit-background-clip: text;
-}
+/*#reddit span {*/
+/*    background: linear-gradient(45deg, rgb(232, 123, 77), rgb(255, 69, 0), rgb(163, 52, 7));*/
+/*    -webkit-background-clip: text;*/
+/*}*/
 
 #spotify span {
     background: linear-gradient(45deg, rgb(28, 170, 35), rgb(85, 253, 29), rgb(6, 94, 9));
@@ -160,6 +160,14 @@ button {
     text-shadow: 0 0 10px rgba(28, 170, 35, 0.7),
     0 0 20px rgba(85, 253, 29, 0.7),
     0 0 30px rgba(6, 94, 9, 0.7);
+}
+
+#twitter span {
+    background: linear-gradient(45deg, rgb(62, 62, 62), rgb(51, 51, 51), rgb(255, 255, 255));
+    -webkit-background-clip: text;
+    text-shadow: 0 0 10px rgba(62, 62, 62, 0.7),
+    0 0 20px rgba(255, 255, 255, 0.7),
+    0 0 30px rgba(51, 51, 51, 0.7);
 }
 
 /* Hover Effect */
@@ -192,7 +200,9 @@ h1:hover, h4:hover, h5:hover, h6:hover, button:hover {
 }
 
 /*Apply the Gradient Animation to Text*/
-#youtube span, #gaming-youtube span, #twitch span, #discord span, #co-op-cast span, #youtubeVods span, #instagram span, #donations span,#youtube2 span, #reddit span, #spotify span,
+#youtube span, #gaming-youtube span, #twitch span, #discord span, #co-op-cast span,
+#youtubeVods span, #instagram span, #donations span, #youtube2 span, #reddit span,
+#spotify span, #twitter span,
 #Name, #description, #description-two, #description-three,
 #description-four, #description-five, #description-six {
     background-size: 200% 200%;
