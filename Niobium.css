@@ -112,31 +112,49 @@ button {
 #youtube span, #gaming-youtube span {
     background: linear-gradient(45deg, rgb(255, 0, 144), rgb(215, 0, 0), rgb(126, 2, 103));
     -webkit-background-clip: text;
+    text-shadow: 0 0 10px rgba(255, 0, 144, 0.7),
+    0 0 20px rgba(215, 0, 0, 0.7),
+    0 0 30px rgba(126, 2, 103, 0.7);
 }
 
 #twitch span {
     background: linear-gradient(45deg, rgb(131, 58, 180), rgb(231, 29, 253), rgb(179, 69, 252));
     -webkit-background-clip: text;
+    text-shadow: 0 0 10px rgba(131, 58, 180, 0.7),
+    0 0 20px rgba(231, 29, 253, 0.7),
+    0 0 30px rgba(179, 69, 252, 0.7);
 }
 
 #discord span {
     background: linear-gradient(45deg, rgb(33, 28, 170), rgb(104, 29, 253), rgb(69, 203, 252));
     -webkit-background-clip: text;
+    text-shadow: 0 0 10px rgba(33, 28, 170, 0.7),
+    0 0 20px rgba(104, 29, 253, 0.7),
+    0 0 30px rgba(69, 203, 252, 0.7);
 }
 
 #co-op-cast span {
     background: linear-gradient(45deg, rgb(33, 28, 170), rgb(104, 29, 253), rgb(69, 203, 252));
     -webkit-background-clip: text;
+    text-shadow: 0 0 10px rgba(33, 28, 170, 0.7),
+    0 0 20px rgba(104, 29, 253, 0.7),
+    0 0 30px rgba(69, 203, 252, 0.7);
 }
 
 #youtubeVods span {
     background: linear-gradient(45deg, rgb(33, 28, 170), rgb(104, 29, 253), rgb(69, 203, 252));
     -webkit-background-clip: text;
+    text-shadow: 0 0 10px rgba(33, 28, 170, 0.7),
+    0 0 20px rgba(104, 29, 253, 0.7),
+    0 0 30px rgba(69, 203, 252, 0.7);
 }
 
 #instagram span {
     background: linear-gradient(135deg, rgb(253, 29, 29), rgb(252, 176, 69), rgb(131, 58, 180));
     -webkit-background-clip: text;
+    text-shadow: 0 0 10px rgba(253, 29, 29, 0.7),
+    0 0 20px rgba(252, 176, 69, 0.7),
+    0 0 30px rgba(131, 58, 180, 0.7);
 }
 
 /*#donations span {*/
@@ -147,6 +165,9 @@ button {
 #youtube2 span {
     background: linear-gradient(45deg, rgb(255, 0, 144), rgb(215, 0, 0), rgb(126, 2, 103));
     -webkit-background-clip: text;
+    text-shadow: 0 0 10px rgba(255, 0, 144, 0.7),
+    0 0 20px rgba(215, 0, 0, 0.7),
+    0 0 30px rgba(126, 2, 103, 0.7);
 }
 
 /*#reddit span {*/
@@ -223,5 +244,6 @@ h1:hover, h4:hover, h5:hover, h6:hover, button:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 
 
