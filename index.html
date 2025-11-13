@@ -5,6 +5,8 @@
     <title>Niobium</title>
     <link rel="stylesheet" href="Niobium.css">
     <link rel="icon" type="image/png" href="NiobiumIcon.png">
+    <link rel="stylesheet" href="links_fancyness.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 </head>
 <body>
 <div class="vignette"></div>
@@ -20,6 +22,9 @@
     <button class="button">
         <a href="commands.html">Commands</a>
     </button>
+    <button>
+        <a href="niobot%20before%20collapsable%20buttons.html">Niobot</a>
+    </button>
 </div>
 
 <div class="top-text">
@@ -33,7 +38,13 @@
 
 <div class="links">
     <a href="https://www.twitch.tv/niobium_exe">
-        <button id="twitch"><span>Twitch</span></button>
+        <button id="twitch">
+<!--            <svg viewBox="0 0 24 24" width="24" height="24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" id="twitch-icon">-->
+<!--                <path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7">-->
+<!--                </path>-->
+<!--            </svg>-->
+            <span>Twitch</span>
+        </button>
     </a>
     <a href="https://www.youtube.com/@NiobiumBaits">
         <button id="youtube"><span>Scambaiting YouTube Channel</span></button>
@@ -41,20 +52,20 @@
     <a href="https://discord.gg/8DMvdfPrVC">
         <button id="discord"><span>Discord</span></button>
     </a>
-    <a href="https://www.kick.com/live/niobium-exe">
-        <button id="kick"><span>Kick</span></button>
-    </a>
     <a href="https://www.youtube.com/@Niobium_EXE">
-        <button id="gaming-youtube"><span>Gaming YouTube Channel</span></button>
+        <button id="youtube2"><span>Gaming YouTube Channel</span></button>
     </a>
-    <a href="https://co-op-cast.com">
-        <button id="co-op-cast"><span>Co-op Cast Podcast</span></button>
-    </a>
+<!--    <a href="https://co-op-cast.com">-->
+<!--        <button id="co-op-cast"><span>Co-op Cast Podcast</span></button>-->
+<!--    </a>-->
     <a href="https://www.youtube.com/@NiobiumVODS">
-        <button id="youtubeVods"><span>Vod Channel</span></button>
+        <button id="youtube3"><span>Vod Channel</span></button>
     </a>
     <a href="https://www.instagram.com/niobium.exe">
         <button id="instagram"><span>Instagram</span></button>
+    </a>
+    <a href="https://kick.com/live/niobium">
+        <button id="kick"><span>Kick</span></button>
     </a>
 <!--    <a href="https://streamlabs.com/">-->
 <!--        <button id="donations"><span>Donations</span></button>-->
@@ -65,23 +76,116 @@
 <!--    <a href="https://www.reddit.com/r/Niobium/">-->
 <!--        <button id="reddit"><span>Reddit</span></button>-->
 <!--    </a>-->
-    <a href="https://open.spotify.com/user/30eksa6xamva3vzsnu7oqlftu">
+    <a href="https://open.spotify.com/user/30eksa6xamva3vzsnu7oqlftu?si=e408a9a6d9a04cf7">
         <button id="spotify"><span>Spotify</span></button>
     </a>
     <a href="https://twitter.com/niobium_exe">
         <button id="twitter"><span>Twitter/X</span></button>
     </a>
-    <a href="https://throne.com/niobium">
-        <button id="twitter"><span>Throne</span></button>
-    </a>
 </div><br>
 
 <br><br><br>
 
+<!--Stuff for the gradient on the icons-->
+<svg width="0" height="0">
+  <defs>
+    <linearGradient id="twitch-gradient" x1="-100%" y1="-100%" x2="200%" y2="200%">
+      <stop offset="0%" stop-color="rgb(131, 58, 180)" />
+      <stop offset="50%" stop-color="rgb(231, 29, 253)" />
+      <stop offset="100%" stop-color="rgb(179, 69, 252)" />
+      <animateTransform
+        attributeName="gradientTransform"
+        type="translate"
+        values="-1 0; 1 0; -1 0"
+        dur="4s"
+        repeatCount="indefinite" />
+    </linearGradient>
+
+    <linearGradient id="youtube-gradient" x1="-100%" y1="-100%" x2="200%" y2="200%">
+      <stop offset="0%" stop-color="rgb(255, 0, 144)" />
+      <stop offset="50%" stop-color="rgb(215, 0, 0)" />
+      <stop offset="100%" stop-color="rgb(126, 2, 103)" />
+      <animateTransform
+        attributeName="gradientTransform"
+        type="translate"
+        values="-1 0; 1 0; -1 0"
+        dur="4s"
+        repeatCount="indefinite" />
+    </linearGradient>
+
+    <linearGradient id="discord-gradient" x1="-100%" y1="-100%" x2="200%" y2="200%">
+      <stop offset="0%" stop-color="rgb(33, 28, 170)" />
+      <stop offset="50%" stop-color="rgb(104, 29, 253)" />
+      <stop offset="100%" stop-color="rgb(69, 203, 252)" />
+      <animateTransform
+        attributeName="gradientTransform"
+        type="translate"
+        values="-1 0; 1 0; -1 0"
+        dur="4s"
+        repeatCount="indefinite" />
+    </linearGradient>
+
+    <linearGradient id="instagram-gradient" x1="-100%" y1="-100%" x2="200%" y2="200%">
+      <stop offset="0%" stop-color="rgb(253, 29, 29)" />
+      <stop offset="50%" stop-color="rgb(252, 176, 69)" />
+      <stop offset="100%" stop-color="rgb(131, 58, 180)" />
+      <animateTransform
+        attributeName="gradientTransform"
+        type="translate"
+        values="-1 0; 1 0; -1 0"
+        dur="4s"
+        repeatCount="indefinite" />
+    </linearGradient>
+
+    <linearGradient id="donations-gradient" x1="-100%" y1="-100%" x2="200%" y2="200%">
+      <stop offset="0%" stop-color="rgb(28, 170, 35)" />
+      <stop offset="50%" stop-color="rgb(85, 253, 29)" />
+      <stop offset="100%" stop-color="rgb(6, 94, 9)" />
+      <animateTransform
+        attributeName="gradientTransform"
+        type="translate"
+        values="-1 0; 1 0; -1 0"
+        dur="4s"
+        repeatCount="indefinite" />
+    </linearGradient>
+
+    <linearGradient id="reddit-gradient" x1="-100%" y1="-100%" x2="200%" y2="200%">
+      <stop offset="0%" stop-color="rgb(232, 123, 77)" />
+      <stop offset="50%" stop-color="rgb(255, 69, 0)" />
+      <stop offset="100%" stop-color="rgb(163, 52, 7)" />
+      <animateTransform
+        attributeName="gradientTransform"
+        type="translate"
+        values="-1 0; 1 0; -1 0"
+        dur="4s"
+        repeatCount="indefinite" />
+    </linearGradient>
+
+    <linearGradient id="spotify-gradient" x1="-100%" y1="-100%" x2="200%" y2="200%">
+      <stop offset="0%" stop-color="rgb(28, 170, 35)" />
+      <stop offset="50%" stop-color="rgb(85, 253, 29)" />
+      <stop offset="100%" stop-color="rgb(6, 94, 9)" />
+      <animateTransform
+        attributeName="gradientTransform"
+        type="translate"
+        values="-1 0; 1 0; -1 0"
+        dur="4s"
+        repeatCount="indefinite" />
+    </linearGradient>
+
+    <linearGradient id="twitter-gradient" x1="-100%" y1="-100%" x2="200%" y2="200%">
+      <stop offset="0%" stop-color="rgb(62, 62, 62)" />
+      <stop offset="50%" stop-color="rgb(255, 255, 255)" />
+      <stop offset="100%" stop-color="rgb(51, 51, 51)" />
+      <animateTransform
+        attributeName="gradientTransform"
+        type="translate"
+        values="-1 0; 1 0; -1 0"
+        dur="4s"
+        repeatCount="indefinite" />
+    </linearGradient>
+  </defs>
+</svg>
+
 </body>
 </html>
-
-
-
-
-

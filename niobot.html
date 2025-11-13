@@ -32,257 +32,272 @@
 
         <div class="bot-stuff">
             <div class="bot-controls-sub-div">
-<!--                Test switch-->
-<!--                <div class="test-switch-one">-->
-<!--                    <h6>Test switch one</h6>-->
-<!--                    <label class="switch" id="test-switch-label">-->
-<!--                        <input id="test-switch-toggle" type="checkbox" onchange="testSwitchToggle()">-->
-<!--                        <span class="slider round"></span>-->
-<!--                    </label>-->
-<!--                </div>-->
 
-<!--                <br>-->
                 <div class="bot-controls-div">
-                    <h4>Misc. bot</h4>
+                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">Misc. bot</p></button>
+                    <div class="toggle-panel">
+                        <div class="toggle-switches" id="bot-overall-switch-div">
+                            <h6>Bot Overall</h6>
+                            <label class="switch" id="bot-overall-switch-label">
+                                <input id="bot-overall-switch-toggle" type="checkbox" onchange="botOverallSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
 
-                    <div class="toggle-switches" id="bot-overall-switch-div">
-                        <h6>Bot Overall</h6>
-                        <label class="switch" id="bot-overall-switch-label">
-                            <input id="bot-overall-switch-toggle" type="checkbox" onchange="botOverallSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
+                        <div class="toggle-switches" id="gpt-toggle-switch-div">
+                            <h6>Gpt toggle</h6>
+                            <label class="switch" id="gpt-toggle-switch-label">
+                                <input id="gpt-toggle-switch-toggle" type="checkbox" onchange="gptToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-switches" id="commands-toggle-switch-div">
+                            <h6>Commands toggle</h6>
+                            <label class="switch" id="commands-toggle-switch-label">
+                                <input id="commands-toggle-switch-toggle" type="checkbox" onchange="commandsToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
                     </div>
-
-                    <div class="toggle-switches" id="gpt-toggle-switch-div">
-                        <h6>Gpt toggle</h6>
-                        <label class="switch" id="gpt-toggle-switch-label">
-                            <input id="gpt-toggle-switch-toggle" type="checkbox" onchange="gptToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
-                    <div class="toggle-switches" id="commands-toggle-switch-div">
-                        <h6>Commands toggle</h6>
-                        <label class="switch" id="commands-toggle-switch-label">
-                            <input id="commands-toggle-switch-toggle" type="checkbox" onchange="commandsToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
                 </div>
 
                 <br>
 
                 <div class="bot-controls-div">
-                    <h4>8 ball</h4>
-
-                    <div class="toggle-switches" id="8ball-toggle-switch-div">
-                        <h6>8ball toggle</h6>
-                        <label class="switch" id="eightball-toggle-switch-label">
-                            <input id="eightball-toggle-switch-toggle" type="checkbox" onchange="eightballToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
+                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">8 ball</p></button>
+                    <div class="toggle-panel">
+                        <div class="toggle-switches" id="8ball-toggle-switch-div">
+                            <h6>8ball toggle</h6>
+                            <label class="switch" id="eightball-toggle-switch-label">
+                                <input id="eightball-toggle-switch-toggle" type="checkbox" onchange="eightballToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
                     </div>
-
                 </div>
 
                 <br>
 
                 <div class="bot-controls-div">
-                    <h4>Timed messages</h4>
-
-                    <div class="toggle-switches" id="timed-messages-toggle-switch-div">
-                        <h6>Timed messages toggle</h6>
-                        <label class="switch" id="timed-messages-toggle-switch-label">
-                            <input id="timed-messages-toggle-switch-toggle" type="checkbox" onchange="timedMessagesToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
+                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">Timed</p></button>
+                    <div class="toggle-panel">
+                        <div class="toggle-switches" id="timed-messages-toggle-switch-div">
+                            <h6>Timed messages toggle</h6>
+                            <label class="switch" id="timed-messages-toggle-switch-label">
+                                <input id="timed-messages-toggle-switch-toggle" type="checkbox" onchange="timedMessagesToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
                     </div>
-
                 </div>
 
                 <br>
 
                 <div class="bot-controls-div">
-                    <h4>Timers</h4>
-
-                    <div class="toggle-switches" id="timer-toggle-switch-div">
-                        <h6>Timer toggle</h6>
-                        <label class="switch" id="timer-toggle-switch-label">
-                            <input id="timer-toggle-switch-toggle" type="checkbox" onchange="timerToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
+                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">Timers</p></button>
+                    <div class="toggle-panel">
+                        <div class="toggle-switches" id="timer-toggle-switch-div">
+                            <h6>Timer toggle</h6>
+                            <label class="switch" id="timer-toggle-switch-label">
+                                <input id="timer-toggle-switch-toggle" type="checkbox" onchange="timerToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
                     </div>
-
                 </div>
 
                 <br>
 
                 <div class="bot-controls-div">
-                    <h4>Quotes</h4>
-
-                    <div class="toggle-switches" id="quote-toggle-switch-div">
-                        <h6>Quote toggle</h6>
-                        <label class="switch" id="quote-toggle-switch-label">
-                            <input id="quote-toggle-switch-toggle" type="checkbox" onchange="quoteToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
+                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">Quotes</p></button>
+                    <div class="toggle-panel">
+                        <div class="toggle-switches" id="quote-toggle-switch-div">
+                            <h6>Quote toggle</h6>
+                            <label class="switch" id="quote-toggle-switch-label">
+                                <input id="quote-toggle-switch-toggle" type="checkbox" onchange="quoteToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
                     </div>
-
                 </div>
 
                 <br>
 
                 <div class="bot-controls-div">
-                    <h4>Chat alerts</h4>
+                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">Chat alerts</p></button>
+                    <div class="toggle-panel">
+                        <div class="toggle-switches" id="chat-alerts-toggle-switch-div">
+                            <h6>Chat alerts toggle</h6>
+                            <label class="switch" id="chat-alerts-toggle-switch-label">
+                                <input id="chat-alerts-toggle-switch-toggle" type="checkbox" onchange="chatAlertsToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
 
-                    <div class="toggle-switches" id="chat-alerts-toggle-switch-div">
-                        <h6>Chat alerts toggle</h6>
-                        <label class="switch" id="chat-alerts-toggle-switch-label">
-                            <input id="chat-alerts-toggle-switch-toggle" type="checkbox" onchange="chatAlertsToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
+                        <div class="toggle-switches" id="ads-timer-toggle-switch-div">
+                            <h6>Ads timer toggle</h6>
+                            <label class="switch" id="ads-timer-toggle-switch-label">
+                                <input id="ads-timer-toggle-switch-toggle" type="checkbox" onchange="adsTimerToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-switches" id="ads-break-toggle-switch-div">
+                            <h6>Ads break toggle</h6>
+                            <label class="switch" id="ads-break-toggle-switch-label">
+                                <input id="ads-break-toggle-switch-toggle" type="checkbox" onchange="adsBreakToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-switches" id="follow-thank-toggle-switch-div">
+                            <h6>Follow thank toggle</h6>
+                            <label class="switch" id="follow-thank-toggle-switch-label">
+                                <input id="follow-thank-toggle-switch-toggle" type="checkbox" onchange="followThankToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-switches" id="sub-thank-toggle-switch-div">
+                            <h6>Sub thank toggle</h6>
+                            <label class="switch" id="sub-thank-toggle-switch-label">
+                                <input id="sub-thank-toggle-switch-toggle" type="checkbox" onchange="subThankToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-switches" id="gift-sub-thank-toggle-switch-div">
+                            <h6>Gift sub thank toggle</h6>
+                            <label class="switch" id="gift-sub-thank-toggle-switch-label">
+                                <input id="gift-sub-thank-toggle-switch-toggle" type="checkbox" onchange="giftSubThankToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-switches" id="bits-thank-toggle-switch-div">
+                            <h6>Bits thank toggle</h6>
+                            <label class="switch" id="bits-thank-toggle-switch-label">
+                                <input id="bits-thank-toggle-switch-toggle" type="checkbox" onchange="bitsThankToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-switches" id="live-announcement-toggle-switch-div">
+                            <h6>Live announcement toggle</h6>
+                            <label class="switch" id="live-announcement-toggle-switch-label">
+                                <input id="live-announcement-toggle-switch-toggle" type="checkbox" onchange="liveAnnouncementToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
                     </div>
-
-                    <div class="toggle-switches" id="ads-timer-toggle-switch-div">
-                        <h6>Ads timer toggle</h6>
-                        <label class="switch" id="ads-timer-toggle-switch-label">
-                            <input id="ads-timer-toggle-switch-toggle" type="checkbox" onchange="adsTimerToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
-                    <div class="toggle-switches" id="ads-break-toggle-switch-div">
-                        <h6>Ads break toggle</h6>
-                        <label class="switch" id="ads-break-toggle-switch-label">
-                            <input id="ads-break-toggle-switch-toggle" type="checkbox" onchange="adsBreakToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
-                    <div class="toggle-switches" id="follow-thank-toggle-switch-div">
-                        <h6>Follow thank toggle</h6>
-                        <label class="switch" id="follow-thank-toggle-switch-label">
-                            <input id="follow-thank-toggle-switch-toggle" type="checkbox" onchange="followThankToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
-                    <div class="toggle-switches" id="sub-thank-toggle-switch-div">
-                        <h6>Sub thank toggle</h6>
-                        <label class="switch" id="sub-thank-toggle-switch-label">
-                            <input id="sub-thank-toggle-switch-toggle" type="checkbox" onchange="subThankToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
-                    <div class="toggle-switches" id="gift-sub-thank-toggle-switch-div">
-                        <h6>Gift sub thank toggle</h6>
-                        <label class="switch" id="gift-sub-thank-toggle-switch-label">
-                            <input id="gift-sub-thank-toggle-switch-toggle" type="checkbox" onchange="giftSubThankToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
-                    <div class="toggle-switches" id="bits-thank-toggle-switch-div">
-                        <h6>Bits thank toggle</h6>
-                        <label class="switch" id="bits-thank-toggle-switch-label">
-                            <input id="bits-thank-toggle-switch-toggle" type="checkbox" onchange="bitsThankToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
-                    <div class="toggle-switches" id="live-announcement-toggle-switch-div">
-                        <h6>Live announcement toggle</h6>
-                        <label class="switch" id="live-announcement-toggle-switch-label">
-                            <input id="live-announcement-toggle-switch-toggle" type="checkbox" onchange="liveAnnouncementToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
                 </div>
 
                 <br>
 
                 <div class="bot-controls-div">
-                    <h4>Moderation</h4>
+                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">Moderation</p></button>
+                    <div class="toggle-panel">
+                        <div class="toggle-switches" id="moderation-toggle-switch-div">
+                            <h6>Moderation</h6>
+                            <label class="switch" id="moderation-toggle-switch-label">
+                                <input id="moderation-toggle-switch-toggle" type="checkbox" onchange="moderationToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
 
-                    <div class="toggle-switches" id="moderation-toggle-switch-div">
-                        <h6>Moderation</h6>
-                        <label class="switch" id="moderation-toggle-switch-label">
-                            <input id="moderation-toggle-switch-toggle" type="checkbox" onchange="moderationToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
+                        <div class="toggle-switches" id="caps-protection-toggle-switch-div">
+                            <h6>Caps protection</h6>
+                            <label class="switch" id="caps-protection-toggle-switch-label">
+                                <input id="caps-protection-toggle-switch-toggle" type="checkbox" onchange="capsProtectionToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-switches" id="symbol-protection-toggle-switch-div">
+                            <h6>Symbol protection</h6>
+                            <label class="switch" id="symbol-protection-toggle-switch-label">
+                                <input id="symbol-protection-toggle-switch-toggle" type="checkbox" onchange="symbolProtectionToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-switches" id="word-protection-toggle-switch-div">
+                            <h6>Word protection</h6>
+                            <label class="switch" id="word-protection-toggle-switch-label">
+                                <input id="word-protection-toggle-switch-toggle" type="checkbox" onchange="wordProtectionToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-switches" id="paragraph-protection-toggle-switch-div">
+                            <h6>Paragraph protection</h6>
+                            <label class="switch" id="paragraph-protection-toggle-switch-label">
+                                <input id="paragraph-protection-toggle-switch-toggle" type="checkbox" onchange="paragraphProtectionToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-switches" id="emote-protection-toggle-switch-div">
+                            <h6>Emote protection</h6>
+                            <label class="switch" id="emote-protection-toggle-switch-label">
+                                <input id="emote-protection-toggle-switch-toggle" type="checkbox" onchange="emoteProtectionToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-switches" id="zagloo-protection-toggle-switch-div">
+                            <h6>Zagloo protection</h6>
+                            <label class="switch" id="zagloo-protection-toggle-switch-label">
+                                <input id="zagloo-protection-toggle-switch-toggle" type="checkbox" onchange="zaglooProtectionToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
                     </div>
-
-                    <div class="toggle-switches" id="caps-protection-toggle-switch-div">
-                        <h6>Caps protection</h6>
-                        <label class="switch" id="caps-protection-toggle-switch-label">
-                            <input id="caps-protection-toggle-switch-toggle" type="checkbox" onchange="capsProtectionToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
-                    <div class="toggle-switches" id="symbol-protection-toggle-switch-div">
-                        <h6>Symbol protection</h6>
-                        <label class="switch" id="symbol-protection-toggle-switch-label">
-                            <input id="symbol-protection-toggle-switch-toggle" type="checkbox" onchange="symbolProtectionToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
-                    <div class="toggle-switches" id="word-protection-toggle-switch-div">
-                        <h6>Word protection</h6>
-                        <label class="switch" id="word-protection-toggle-switch-label">
-                            <input id="word-protection-toggle-switch-toggle" type="checkbox" onchange="wordProtectionToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
-                    <div class="toggle-switches" id="paragraph-protection-toggle-switch-div">
-                        <h6>Paragraph protection</h6>
-                        <label class="switch" id="paragraph-protection-toggle-switch-label">
-                            <input id="paragraph-protection-toggle-switch-toggle" type="checkbox" onchange="paragraphProtectionToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
-                    <div class="toggle-switches" id="emote-protection-toggle-switch-div">
-                        <h6>Emote protection</h6>
-                        <label class="switch" id="emote-protection-toggle-switch-label">
-                            <input id="emote-protection-toggle-switch-toggle" type="checkbox" onchange="emoteProtectionToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
-                    <div class="toggle-switches" id="zagloo-protection-toggle-switch-div">
-                        <h6>Zagloo protection</h6>
-                        <label class="switch" id="zagloo-protection-toggle-switch-label">
-                            <input id="zagloo-protection-toggle-switch-toggle" type="checkbox" onchange="zaglooProtectionToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
                 </div>
 
                 <br>
 
                 <div class="bot-controls-div">
-                    <h4>Auto-Shoutout</h4>
-
-                    <div class="toggle-switches" id="auto-shoutout-toggle-switch-div">
-                        <h6>Auto shoutout</h6>
-                        <label class="switch" id="auto-shoutout-toggle-switch-label">
-                            <input id="auto-shoutout-toggle-switch-toggle" type="checkbox" onchange="autoShoutoutToggleSwitchToggle()">
-                            <span class="slider round"></span>
-                        </label>
+                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">Auto-Shoutout</p></button>
+                    <div class="toggle-panel">
+                        <div class="toggle-switches" id="auto-shoutout-toggle-switch-div">
+                            <h6>Auto shoutout</h6>
+                            <label class="switch" id="auto-shoutout-toggle-switch-label">
+                                <input id="auto-shoutout-toggle-switch-toggle" type="checkbox" onchange="autoShoutoutToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
                     </div>
-
                 </div>
 
             </div>
 
         </div>
-
+        <script>
+            // On page load, collapse all panels except the first one for demo purpose
+            document.addEventListener('DOMContentLoaded', function () {
+                const panels = document.querySelectorAll('.toggle-panel');
+                const buttons = document.querySelectorAll('.collapsible-panel');
+                panels.forEach((panel, idx) => {
+                    if(idx !== 0) {
+                        panel.classList.add('panel-hidden');
+                        buttons[idx].classList.add('collapsed');
+                    }
+                });
+                buttons.forEach((btn, idx) => {
+                    btn.addEventListener('click', () => {
+                        const panel = btn.nextElementSibling;
+                        if (panel.classList.contains('panel-hidden')) {
+                            panel.classList.remove('panel-hidden');
+                            btn.classList.remove('collapsed');
+                        } else {
+                            panel.classList.add('panel-hidden');
+                            btn.classList.add('collapsed');
+                        }
+                    });
+                });
+            });
+        </script>
     </body>
 </html>

@@ -1,16 +1,17 @@
 .bot-stuff {
-
+    height: fit-content;
 }
 
 .bot-controls-sub-div {
-    display: flex;
-    flex-wrap: wrap;
-    /*column-count: 2;*/
     gap: 5px;
-    margin-top: 20px;
-    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    column-gap: 1%;
     row-gap: 10px;
+
 }
 
 .bot-controls-div {
@@ -18,14 +19,39 @@
     border: 5px solid rgb(51, 51, 51);
     border-radius: 15px;
     box-shadow: black 5px 5px 20px 1px;
-    padding: 10px 15px;
-    /*min-width: 150px;*/
-    /*max-width: 100px;*/
-    width: 40%;
-    min-height: 600px;
-    max-height: fit-content;
+
     transition: transform 0.2s ease-in-out;
+
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
 }
 
+/* collapsible panels stuff */
+.collapsible-panel-button-text {
+    color: white;
+}
 
+.collapsible-panel {
+    cursor: pointer;
+    color: white;
 
+    width: 90%;
+    min-width: fit-content;
+    height: 90%;
+    min-height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.panel-hidden {
+    display: none;
+}
+.collapsible-panel:after {
+    content: ' ▼';
+}
+.collapsible-panel.collapsed:after {
+    content: ' ▶';
+}
