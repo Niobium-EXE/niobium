@@ -36,6 +36,7 @@
                 <div class="bot-controls-div">
                     <button class="collapsible-panel"><p class="collapsible-panel-button-text">Misc. bot</p></button>
                     <div class="toggle-panel">
+                        <br>
                         <div class="toggle-switches" id="bot-overall-switch-div">
                             <h6>Bot Overall</h6>
                             <label class="switch" id="bot-overall-switch-label">
@@ -275,15 +276,11 @@
 
         </div>
         <script>
-            // On page load, collapse all panels except the first one for demo purpose
+            // On page load, collapse all panels
             document.addEventListener('DOMContentLoaded', function () {
                 const panels = document.querySelectorAll('.toggle-panel');
                 const buttons = document.querySelectorAll('.collapsible-panel');
                 panels.forEach((panel, idx) => {
-                    // if(idx !== 0) {
-                    //     panel.classList.add('panel-hidden');
-                    //     buttons[idx].classList.add('collapsed');
-                    // }
                     panel.classList.add('panel-hidden');
                     buttons[idx].classList.add('collapsed');
                 });
@@ -302,5 +299,4 @@
             });
         </script>
     </body>
-
 </html>
