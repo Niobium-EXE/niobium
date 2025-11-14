@@ -26,24 +26,31 @@
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 /* collapsible panels stuff */
-.collapsible-panel-button-text {
-    color: white;
-}
-
 .collapsible-panel {
     cursor: pointer;
     color: white;
 
-    width: 90%;
+    max-width: 90%;
+    width: 100%;
     min-width: fit-content;
-    height: 90%;
     min-height: fit-content;
+
     display: flex;
+    flex-direction: row;
+
     align-items: center;
     justify-content: center;
+
+
+}
+.collapsible-panel-button-text {
+    color: white;
 
 }
 .panel-hidden {
