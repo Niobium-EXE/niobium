@@ -51,6 +51,7 @@
 }
 .collapsible-panel-button-text {
     color: white;
+    font-size: 0.75em;
 }
 .panel-hidden {
     display: none;
@@ -60,4 +61,5 @@
 }
 .collapsible-panel.collapsed:after {
     content: ' ▶';
+
 }
