@@ -280,10 +280,12 @@
                 const panels = document.querySelectorAll('.toggle-panel');
                 const buttons = document.querySelectorAll('.collapsible-panel');
                 panels.forEach((panel, idx) => {
-                    if(idx !== 0) {
-                        panel.classList.add('panel-hidden');
-                        buttons[idx].classList.add('collapsed');
-                    }
+                    // if(idx !== 0) {
+                    //     panel.classList.add('panel-hidden');
+                    //     buttons[idx].classList.add('collapsed');
+                    // }
+                    panel.classList.add('panel-hidden');
+                    buttons[idx].classList.add('collapsed');
                 });
                 buttons.forEach((btn, idx) => {
                     btn.addEventListener('click', () => {
@@ -300,4 +302,5 @@
             });
         </script>
     </body>
+
 </html>
