@@ -33,10 +33,11 @@
         <div class="bot-stuff">
             <div class="bot-controls-sub-div">
 
+<!--                Misc bot stuff-->
                 <div class="bot-controls-div">
                     <button class="collapsible-panel"><p class="collapsible-panel-button-text">Misc. bot</p></button>
                     <div class="toggle-panel">
-                        <br>
+                        <div class="blank-space-above-and-below-toggles"></div>
                         <div class="toggle-switches" id="bot-overall-switch-div">
                             <h6>Bot Overall</h6>
                             <label class="switch" id="bot-overall-switch-label">
@@ -60,14 +61,17 @@
                                 <span class="slider round"></span>
                             </label>
                         </div>
+                        <div class="blank-space-above-and-below-toggles"></div>
                     </div>
                 </div>
 
                 <br>
 
+<!--                8 ball-->
                 <div class="bot-controls-div">
                     <button class="collapsible-panel"><p class="collapsible-panel-button-text">8 ball</p></button>
                     <div class="toggle-panel">
+                        <div class="blank-space-above-and-below-toggles"></div>
                         <div class="toggle-switches" id="8ball-toggle-switch-div">
                             <h6>8ball toggle</h6>
                             <label class="switch" id="eightball-toggle-switch-label">
@@ -75,14 +79,17 @@
                                 <span class="slider round"></span>
                             </label>
                         </div>
+                        <div class="blank-space-above-and-below-toggles"></div>
                     </div>
                 </div>
 
                 <br>
 
+<!--                Timed messages-->
                 <div class="bot-controls-div">
                     <button class="collapsible-panel"><p class="collapsible-panel-button-text">Timed</p></button>
                     <div class="toggle-panel">
+                        <div class="blank-space-above-and-below-toggles"></div>
                         <div class="toggle-switches" id="timed-messages-toggle-switch-div">
                             <h6>Timed messages toggle</h6>
                             <label class="switch" id="timed-messages-toggle-switch-label">
@@ -90,14 +97,19 @@
                                 <span class="slider round"></span>
                             </label>
                         </div>
+                        <br>
+                        <button class="showing-new-window-button" onclick="showUserTimedMessages">Your Timed Messages</button>
+                        <div class="blank-space-above-and-below-toggles"></div>
                     </div>
                 </div>
 
                 <br>
 
+<!--                Timers-->
                 <div class="bot-controls-div">
                     <button class="collapsible-panel"><p class="collapsible-panel-button-text">Timers</p></button>
                     <div class="toggle-panel">
+                        <div class="blank-space-above-and-below-toggles"></div>
                         <div class="toggle-switches" id="timer-toggle-switch-div">
                             <h6>Timer toggle</h6>
                             <label class="switch" id="timer-toggle-switch-label">
@@ -105,14 +117,19 @@
                                 <span class="slider round"></span>
                             </label>
                         </div>
+                        <br>
+                        <button class="showing-new-window-button" onclick="showUserTimers">Your Timers</button>
+                        <div class="blank-space-above-and-below-toggles"></div>
                     </div>
                 </div>
 
                 <br>
 
+<!--                Quotes-->
                 <div class="bot-controls-div">
                     <button class="collapsible-panel"><p class="collapsible-panel-button-text">Quotes</p></button>
                     <div class="toggle-panel">
+                        <div class="blank-space-above-and-below-toggles"></div>
                         <div class="toggle-switches" id="quote-toggle-switch-div">
                             <h6>Quote toggle</h6>
                             <label class="switch" id="quote-toggle-switch-label">
@@ -120,14 +137,18 @@
                                 <span class="slider round"></span>
                             </label>
                         </div>
+                        <div class="blank-space-above-and-below-toggles"></div>
+                        <button class="showing-new-window-button" onclick="showUserQuotes">Your Quotes</button>
                     </div>
                 </div>
 
                 <br>
 
+<!--                Chat alerts-->
                 <div class="bot-controls-div">
                     <button class="collapsible-panel"><p class="collapsible-panel-button-text">Chat alerts</p></button>
                     <div class="toggle-panel">
+                        <div class="blank-space-above-and-below-toggles"></div>
                         <div class="toggle-switches" id="chat-alerts-toggle-switch-div">
                             <h6>Chat alerts toggle</h6>
                             <label class="switch" id="chat-alerts-toggle-switch-label">
@@ -135,70 +156,152 @@
                                 <span class="slider round"></span>
                             </label>
                         </div>
+                        <br>
+<!--                        Ads timer-->
+                        <button class="collapsible-panel"><p class="collapsible-panel-button-text">Ads Timer</p></button>
+                        <div class="toggle-panel">
+                            <div class="toggle-switches" id="ads-timer-toggle-switch-div">
+                                <h6>Ads timer toggle</h6>
+                                <label class="switch" id="ads-timer-toggle-switch-label">
+                                    <input id="ads-timer-toggle-switch-toggle" type="checkbox" onchange="adsTimerToggleSwitchToggle()">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
 
-                        <div class="toggle-switches" id="ads-timer-toggle-switch-div">
-                            <h6>Ads timer toggle</h6>
-                            <label class="switch" id="ads-timer-toggle-switch-label">
-                                <input id="ads-timer-toggle-switch-toggle" type="checkbox" onchange="adsTimerToggleSwitchToggle()">
-                                <span class="slider round"></span>
+                            <br>
+                            <label for="ads-timer-input">
+                                <input class="chat-alerts-input" type="text" id="ads-timer-input" value="Ads Timer Text">
+                                <input class="chat-alerts-input-submit-button" type="submit" value="Submit" onClick="submitChatAlert(adsTimer)">
+                                <input class="chat-alerts-input-reset-button" type="reset" value="Reset">
                             </label>
                         </div>
+                        <br>
+<!--                        Ads Break-->
+                        <button class="collapsible-panel"><p class="collapsible-panel-button-text">Ads Break</p></button>
+                        <div class="toggle-panel">
+                            <div class="toggle-switches" id="ads-break-toggle-switch-div">
+                                <h6>Ads break toggle</h6>
+                                <label class="switch" id="ads-break-toggle-switch-label">
+                                    <input id="ads-break-toggle-switch-toggle" type="checkbox" onchange="adsBreakToggleSwitchToggle()">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
 
-                        <div class="toggle-switches" id="ads-break-toggle-switch-div">
-                            <h6>Ads break toggle</h6>
-                            <label class="switch" id="ads-break-toggle-switch-label">
-                                <input id="ads-break-toggle-switch-toggle" type="checkbox" onchange="adsBreakToggleSwitchToggle()">
-                                <span class="slider round"></span>
+                            <br>
+                            <label for="ads-break-input">
+                                <input class="chat-alerts-input" type="text" id="ads-break-input" value="Ads Break Text">
+                                <input class="chat-alerts-input-submit-button" type="submit" value="Submit" onClick="submitChatAlert(adsBreak)">
+                                <input class="chat-alerts-input-reset-button" type="reset" value="Reset">
                             </label>
                         </div>
-
-                        <div class="toggle-switches" id="follow-thank-toggle-switch-div">
-                            <h6>Follow thank toggle</h6>
-                            <label class="switch" id="follow-thank-toggle-switch-label">
+                        <br>
+<!--                        Follow thank-->
+                        <button class="collapsible-panel"><p class="collapsible-panel-button-text">Follow Thank</p></button>
+                        <div class="toggle-panel">
+                            <div class="toggle-switches" id="follow-thank-toggle-switch-div">
+                                <h6>Follow thank toggle</h6>
+                                <label class="switch" id="follow-thank-toggle-switch-label">
                                 <input id="follow-thank-toggle-switch-toggle" type="checkbox" onchange="followThankToggleSwitchToggle()">
                                 <span class="slider round"></span>
                             </label>
-                        </div>
-
-                        <div class="toggle-switches" id="sub-thank-toggle-switch-div">
-                            <h6>Sub thank toggle</h6>
-                            <label class="switch" id="sub-thank-toggle-switch-label">
-                                <input id="sub-thank-toggle-switch-toggle" type="checkbox" onchange="subThankToggleSwitchToggle()">
-                                <span class="slider round"></span>
+                            </div>
+                            <br>
+                            <label for="follow-thank-input">
+                                <input class="chat-alerts-input" type="text" id="follow-thank-input" value="Follow Thank Text">
+                                <input class="chat-alerts-input-submit-button" type="submit" value="Submit" onClick="submitChatAlert(followThank)">
+                                <input class="chat-alerts-input-reset-button" type="reset" value="Reset">
                             </label>
                         </div>
+                        <br>
+<!--                        Sub Thank-->
+                        <button class="collapsible-panel"><p class="collapsible-panel-button-text">Sub Thank</p></button>
+                        <div class="toggle-panel">
+                            <div class="toggle-switches" id="sub-thank-toggle-switch-div">
+                                <h6>Sub thank toggle</h6>
+                                <label class="switch" id="sub-thank-toggle-switch-label">
+                                    <input id="sub-thank-toggle-switch-toggle" type="checkbox" onchange="subThankToggleSwitchToggle()">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
 
-                        <div class="toggle-switches" id="gift-sub-thank-toggle-switch-div">
-                            <h6>Gift sub thank toggle</h6>
-                            <label class="switch" id="gift-sub-thank-toggle-switch-label">
-                                <input id="gift-sub-thank-toggle-switch-toggle" type="checkbox" onchange="giftSubThankToggleSwitchToggle()">
-                                <span class="slider round"></span>
+                            <br>
+                            <label for="sub-thank-input">
+                                <input class="chat-alerts-input" type="text" id="sub-thank-input" value="Sub Thank Text">
+                                <input class="chat-alerts-input-submit-button" type="submit" value="Submit" onClick="submitChatAlert(subThank)">
+                                <input class="chat-alerts-input-reset-button" type="reset" value="Reset">
                             </label>
                         </div>
+                        <br>
+<!--                        Gift Sub Thank-->
+                        <button class="collapsible-panel"><p class="collapsible-panel-button-text">Gift Sub Thank</p></button>
+                        <div class="toggle-panel">
+                            <div class="toggle-switches" id="gift-sub-thank-toggle-switch-div">
+                                <h6>Gift sub thank toggle</h6>
+                                <label class="switch" id="gift-sub-thank-toggle-switch-label">
+                                    <input id="gift-sub-thank-toggle-switch-toggle" type="checkbox" onchange="giftSubThankToggleSwitchToggle()">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
 
-                        <div class="toggle-switches" id="bits-thank-toggle-switch-div">
-                            <h6>Bits thank toggle</h6>
-                            <label class="switch" id="bits-thank-toggle-switch-label">
-                                <input id="bits-thank-toggle-switch-toggle" type="checkbox" onchange="bitsThankToggleSwitchToggle()">
-                                <span class="slider round"></span>
+                            <br>
+                            <label for="gift-sub-thank-input">
+                                <input class="chat-alerts-input" type="text" id="gift-sub-thank-input" value="Gift Sub Thank Text">
+                                <input class="chat-alerts-input-submit-button" type="submit" value="Submit" onClick="submitChatAlert(giftSubThank)">
+                                <input class="chat-alerts-input-reset-button" type="reset" value="Reset">
                             </label>
                         </div>
+                        <br>
+<!--                        Bits Thank-->
+                        <button class="collapsible-panel"><p class="collapsible-panel-button-text">Bits Thank</p></button>
+                        <div class="toggle-panel">
+                            <div class="toggle-switches" id="bits-thank-toggle-switch-div">
+                                <h6>Bits thank toggle</h6>
+                                <label class="switch" id="bits-thank-toggle-switch-label">
+                                    <input id="bits-thank-toggle-switch-toggle" type="checkbox" onchange="bitsThankToggleSwitchToggle()">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
 
-                        <div class="toggle-switches" id="live-announcement-toggle-switch-div">
-                            <h6>Live announcement toggle</h6>
-                            <label class="switch" id="live-announcement-toggle-switch-label">
-                                <input id="live-announcement-toggle-switch-toggle" type="checkbox" onchange="liveAnnouncementToggleSwitchToggle()">
-                                <span class="slider round"></span>
+                            <br>
+                            <label for="bits-thank-input">
+                                <input class="chat-alerts-input" type="text" id="bits-thank-input" value="Bits Thank Text">
+                                <input class="chat-alerts-input-submit-button" type="submit" value="Submit" onClick="submitChatAlert(bitsThank)">
+                                <input class="chat-alerts-input-reset-button" type="reset" value="Reset">
                             </label>
                         </div>
+                        <br>
+<!--                        Live Announcement-->
+                        <button class="collapsible-panel"><p class="collapsible-panel-button-text">Live Announcement</p></button>
+                        <div class="toggle-panel">
+                            <div class="toggle-switches" id="live-announcement-toggle-switch-div">
+                                <h6>Live announcement toggle</h6>
+                                <label class="switch" id="live-announcement-toggle-switch-label">
+                                    <input id="live-announcement-toggle-switch-toggle" type="checkbox" onchange="liveAnnouncementToggleSwitchToggle()">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+
+                            <br>
+                            <label for="live-announcement-input">
+                                <input class="chat-alerts-input" type="text" id="live-announcement-input" value="Live Announcement Text">
+                                <input class="chat-alerts-input-submit-button" type="submit" value="Submit" onClick="submitChatAlert(liveAnnounce)">
+                                <input class="chat-alerts-input-reset-button" type="reset" value="Reset">
+                            </label>
+                        </div>
+                        <br>
+
+                        <div class="blank-space-above-and-below-toggles"></div>
                     </div>
                 </div>
 
                 <br>
 
+<!--                Moderation-->
                 <div class="bot-controls-div">
                     <button class="collapsible-panel"><p class="collapsible-panel-button-text">Moderation</p></button>
                     <div class="toggle-panel">
+                        <div class="blank-space-above-and-below-toggles"></div>
+                        <h6>This is not currently active, it will take a while to build</h6>
                         <div class="toggle-switches" id="moderation-toggle-switch-div">
                             <h6>Moderation</h6>
                             <label class="switch" id="moderation-toggle-switch-label">
@@ -254,14 +357,17 @@
                                 <span class="slider round"></span>
                             </label>
                         </div>
+                        <div class="blank-space-above-and-below-toggles"></div>
                     </div>
                 </div>
 
                 <br>
 
+<!--                Auto shoutout-->
                 <div class="bot-controls-div">
                     <button class="collapsible-panel"><p class="collapsible-panel-button-text">Auto-Shoutout</p></button>
                     <div class="toggle-panel">
+                        <div class="blank-space-above-and-below-toggles"></div>
                         <div class="toggle-switches" id="auto-shoutout-toggle-switch-div">
                             <h6>Auto shoutout</h6>
                             <label class="switch" id="auto-shoutout-toggle-switch-label">
@@ -269,6 +375,9 @@
                                 <span class="slider round"></span>
                             </label>
                         </div>
+                        <br>
+                        <button class="showing-new-window-button" onclick="showUserShoutouts">Your Shoutouts</button>
+                        <div class="blank-space-above-and-below-toggles"></div>
                     </div>
                 </div>
 
