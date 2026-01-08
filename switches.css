@@ -26,6 +26,7 @@
     background-color: #202020;
     -webkit-transition: .4s;
     transition: .4s;
+    border: rgba(170, 170, 170, 0.67);
 }
 
 .slider:before {
@@ -49,7 +50,7 @@ input:checked + .slider {
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #000000;
+    box-shadow: 0 0 1px rgba(170, 170, 170, 0.67);
 }
 
 input:checked + .slider:before {

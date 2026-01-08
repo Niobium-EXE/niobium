@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>Niobot</title>
-        <link rel="stylesheet" href="Niobium.css">
-        <link rel="stylesheet" href="switches.css">
-        <link rel="stylesheet" href="niobot.css">
-        <link rel="icon" type="image/png" href="NiobiumIcon.png">
+        <link rel="stylesheet" href="/static/Niobium.css">
+        <link rel="stylesheet" href="/static/switches.css">
+        <link rel="stylesheet" href="/static/niobot.css">
+        <link rel="icon" type="image/png" href="/static/NiobiumIcon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     </head>
     <body>
@@ -15,16 +15,23 @@
         <div class="top-links">
             <br>
             <button class="button">
-                <a href="index.html">Home</a>
+                <a href="/index">Home</a>
             </button>
             <button class="button">
-                <a href="tts.html">TTS Info</a>
+                <a href="/tts">TTS Info</a>
             </button>
             <button class="button">
-                <a href="setup.html">Setup</a>
+                <a href="/setup">Setup</a>
             </button>
             <button class="button">
-                <a href="commands.html">Commands</a>
+                <a href="/commands">Commands</a>
+            </button>
+            <button class="button">
+                {% if twitch_user %}
+                <a href="{{ url_for('logout') }}">Logout</a>
+                {% else %}
+                <a href="/auth/twitch">Login with Twitch</a>
+                {% endif %}
             </button>
         </div>
 
@@ -32,6 +39,13 @@
 
         <div class="bot-stuff">
             <div class="bot-controls-sub-div">
+
+                <div class="bot-controls-div-top" id="config-overlay">
+                    <button id="close-config-window" style="float:right;">X</button>
+                    <div class="place-to-put-stuff">
+                        <div id="config-window"></div>
+                    </div>
+                </div>
 
 <!--                Misc bot stuff-->
                 <div class="bot-controls-div">
@@ -61,21 +75,19 @@
                                 <span class="slider round"></span>
                             </label>
                         </div>
-                        <div class="blank-space-above-and-below-toggles"></div>
-                    </div>
-                </div>
 
-                <br>
-
-<!--                8 ball-->
-                <div class="bot-controls-div">
-                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">8 ball</p></button>
-                    <div class="toggle-panel">
-                        <div class="blank-space-above-and-below-toggles"></div>
-                        <div class="toggle-switches" id="8ball-toggle-switch-div">
+                        <div class="toggle-switches" id="8ball-toggle-switch-div-misc">
                             <h6>8ball toggle</h6>
-                            <label class="switch" id="eightball-toggle-switch-label">
-                                <input id="eightball-toggle-switch-toggle" type="checkbox" onchange="eightballToggleSwitchToggle()">
+                            <label class="switch" id="eightball-toggle-switch-label-misc">
+                                <input id="eightball-toggle-switch-toggle-misc" type="checkbox" onchange="eightballToggleSwitchToggle()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="toggle-switches" id="timer-toggle-switch-div-misc">
+                            <h6>Timer toggle</h6>
+                            <label class="switch" id="timer-toggle-switch-label-misc">
+                                <input id="timer-toggle-switch-toggle-misc" type="checkbox" onchange="timerToggleSwitchToggle()">
                                 <span class="slider round"></span>
                             </label>
                         </div>
@@ -85,9 +97,27 @@
 
                 <br>
 
+<!--&lt;!&ndash;                8 ball&ndash;&gt;-->
+<!--                <div class="bot-controls-div">-->
+<!--                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">8 ball</p></button>-->
+<!--                    <div class="toggle-panel">-->
+<!--                        <div class="blank-space-above-and-below-toggles"></div>-->
+<!--                        <div class="toggle-switches" id="8ball-toggle-switch-div">-->
+<!--                            <h6>8ball toggle</h6>-->
+<!--                            <label class="switch" id="eightball-toggle-switch-label">-->
+<!--                                <input id="eightball-toggle-switch-toggle" type="checkbox" onchange="eightballToggleSwitchToggle()">-->
+<!--                                <span class="slider round"></span>-->
+<!--                            </label>-->
+<!--                        </div>-->
+<!--                        <div class="blank-space-above-and-below-toggles"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <br>-->
+
 <!--                Timed messages-->
                 <div class="bot-controls-div">
-                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">Timed</p></button>
+                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">Timed Messages</p></button>
                     <div class="toggle-panel">
                         <div class="blank-space-above-and-below-toggles"></div>
                         <div class="toggle-switches" id="timed-messages-toggle-switch-div">
@@ -98,32 +128,32 @@
                             </label>
                         </div>
                         <br>
-                        <button class="showing-new-window-button" onclick="showUserTimedMessages">Your Timed Messages</button>
+                        <button class="showing-new-window-button" data-view="timed">Your Timed Messages</button>
                         <div class="blank-space-above-and-below-toggles"></div>
                     </div>
                 </div>
 
                 <br>
 
-<!--                Timers-->
-                <div class="bot-controls-div">
-                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">Timers</p></button>
-                    <div class="toggle-panel">
-                        <div class="blank-space-above-and-below-toggles"></div>
-                        <div class="toggle-switches" id="timer-toggle-switch-div">
-                            <h6>Timer toggle</h6>
-                            <label class="switch" id="timer-toggle-switch-label">
-                                <input id="timer-toggle-switch-toggle" type="checkbox" onchange="timerToggleSwitchToggle()">
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
-                        <br>
-                        <button class="showing-new-window-button" onclick="showUserTimers">Your Timers</button>
-                        <div class="blank-space-above-and-below-toggles"></div>
-                    </div>
-                </div>
+<!--&lt;!&ndash;                Timers&ndash;&gt;-->
+<!--                <div class="bot-controls-div">-->
+<!--                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">Timers</p></button>-->
+<!--                    <div class="toggle-panel">-->
+<!--                        <div class="blank-space-above-and-below-toggles"></div>-->
+<!--                        <div class="toggle-switches" id="timer-toggle-switch-div">-->
+<!--                            <h6>Timer toggle</h6>-->
+<!--                            <label class="switch" id="timer-toggle-switch-label">-->
+<!--                                <input id="timer-toggle-switch-toggle" type="checkbox" onchange="timerToggleSwitchToggle()">-->
+<!--                                <span class="slider round"></span>-->
+<!--                            </label>-->
+<!--                        </div>-->
+<!--&lt;!&ndash;                        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <button class="showing-new-window-button" data-view="timers">Your Timers</button>&ndash;&gt;-->
+<!--                        <div class="blank-space-above-and-below-toggles"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
 
-                <br>
+<!--                <br>-->
 
 <!--                Quotes-->
                 <div class="bot-controls-div">
@@ -138,7 +168,8 @@
                             </label>
                         </div>
                         <div class="blank-space-above-and-below-toggles"></div>
-                        <button class="showing-new-window-button" onclick="showUserQuotes">Your Quotes</button>
+                        <button class="showing-new-window-button" data-view="quotes">Your Quotes</button>
+
                     </div>
                 </div>
 
@@ -289,79 +320,97 @@
                             </label>
                         </div>
                         <br>
+<!--                        Raid Announcement-->
+                        <button class="collapsible-panel"><p class="collapsible-panel-button-text">Raid Announcement</p></button>
+                        <div class="toggle-panel">
+                            <div class="toggle-switches" id="raid-announcement-toggle-switch-div">
+                                <h6>Raid announcement toggle</h6>
+                                <label class="switch" id="raid-announcement-toggle-switch-label">
+                                    <input id="raid-announcement-toggle-switch-toggle" type="checkbox" onchange="RiveAnnouncementToggleSwitchToggle()">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
 
+                            <br>
+                            <label for="raid-announcement-input">
+                                <input class="chat-alerts-input" type="text" id="raid-announcement-input" value="Raid Announcement Text">
+                                <input class="chat-alerts-input-submit-button" type="submit" value="Submit" onClick="submitChatAlert(raidAnnounce)">
+                                <input class="chat-alerts-input-reset-button" type="reset" value="Reset">
+                            </label>
+                        </div>
+                        <br>
                         <div class="blank-space-above-and-below-toggles"></div>
                     </div>
                 </div>
 
                 <br>
 
-<!--                Moderation-->
-                <div class="bot-controls-div">
-                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">Moderation</p></button>
-                    <div class="toggle-panel">
-                        <div class="blank-space-above-and-below-toggles"></div>
-                        <h6>This is not currently active, it will take a while to build</h6>
-                        <div class="toggle-switches" id="moderation-toggle-switch-div">
-                            <h6>Moderation</h6>
-                            <label class="switch" id="moderation-toggle-switch-label">
-                                <input id="moderation-toggle-switch-toggle" type="checkbox" onchange="moderationToggleSwitchToggle()">
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
+<!--&lt;!&ndash;                Moderation&ndash;&gt;-->
+<!--                <div class="bot-controls-div">-->
+<!--                    <button class="collapsible-panel"><p class="collapsible-panel-button-text">Moderation</p></button>-->
+<!--                    <div class="toggle-panel">-->
+<!--                        <div class="blank-space-above-and-below-toggles"></div>-->
+<!--                        <h6>This is not currently active, it will take a while to build</h6>-->
+<!--                        <div class="toggle-switches" id="moderation-toggle-switch-div">-->
+<!--                            <h6>Moderation</h6>-->
+<!--                            <label class="switch" id="moderation-toggle-switch-label">-->
+<!--                                <input id="moderation-toggle-switch-toggle" type="checkbox" onchange="moderationToggleSwitchToggle()">-->
+<!--                                <span class="slider round"></span>-->
+<!--                            </label>-->
+<!--                        </div>-->
 
-                        <div class="toggle-switches" id="caps-protection-toggle-switch-div">
-                            <h6>Caps protection</h6>
-                            <label class="switch" id="caps-protection-toggle-switch-label">
-                                <input id="caps-protection-toggle-switch-toggle" type="checkbox" onchange="capsProtectionToggleSwitchToggle()">
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
+<!--                        <div class="toggle-switches" id="caps-protection-toggle-switch-div">-->
+<!--                            <h6>Caps protection</h6>-->
+<!--                            <label class="switch" id="caps-protection-toggle-switch-label">-->
+<!--                                <input id="caps-protection-toggle-switch-toggle" type="checkbox" onchange="capsProtectionToggleSwitchToggle()">-->
+<!--                                <span class="slider round"></span>-->
+<!--                            </label>-->
+<!--                        </div>-->
 
-                        <div class="toggle-switches" id="symbol-protection-toggle-switch-div">
-                            <h6>Symbol protection</h6>
-                            <label class="switch" id="symbol-protection-toggle-switch-label">
-                                <input id="symbol-protection-toggle-switch-toggle" type="checkbox" onchange="symbolProtectionToggleSwitchToggle()">
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
+<!--                        <div class="toggle-switches" id="symbol-protection-toggle-switch-div">-->
+<!--                            <h6>Symbol protection</h6>-->
+<!--                            <label class="switch" id="symbol-protection-toggle-switch-label">-->
+<!--                                <input id="symbol-protection-toggle-switch-toggle" type="checkbox" onchange="symbolProtectionToggleSwitchToggle()">-->
+<!--                                <span class="slider round"></span>-->
+<!--                            </label>-->
+<!--                        </div>-->
 
-                        <div class="toggle-switches" id="word-protection-toggle-switch-div">
-                            <h6>Word protection</h6>
-                            <label class="switch" id="word-protection-toggle-switch-label">
-                                <input id="word-protection-toggle-switch-toggle" type="checkbox" onchange="wordProtectionToggleSwitchToggle()">
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
+<!--                        <div class="toggle-switches" id="word-protection-toggle-switch-div">-->
+<!--                            <h6>Word protection</h6>-->
+<!--                            <label class="switch" id="word-protection-toggle-switch-label">-->
+<!--                                <input id="word-protection-toggle-switch-toggle" type="checkbox" onchange="wordProtectionToggleSwitchToggle()">-->
+<!--                                <span class="slider round"></span>-->
+<!--                            </label>-->
+<!--                        </div>-->
 
-                        <div class="toggle-switches" id="paragraph-protection-toggle-switch-div">
-                            <h6>Paragraph protection</h6>
-                            <label class="switch" id="paragraph-protection-toggle-switch-label">
-                                <input id="paragraph-protection-toggle-switch-toggle" type="checkbox" onchange="paragraphProtectionToggleSwitchToggle()">
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
+<!--                        <div class="toggle-switches" id="paragraph-protection-toggle-switch-div">-->
+<!--                            <h6>Paragraph protection</h6>-->
+<!--                            <label class="switch" id="paragraph-protection-toggle-switch-label">-->
+<!--                                <input id="paragraph-protection-toggle-switch-toggle" type="checkbox" onchange="paragraphProtectionToggleSwitchToggle()">-->
+<!--                                <span class="slider round"></span>-->
+<!--                            </label>-->
+<!--                        </div>-->
 
-                        <div class="toggle-switches" id="emote-protection-toggle-switch-div">
-                            <h6>Emote protection</h6>
-                            <label class="switch" id="emote-protection-toggle-switch-label">
-                                <input id="emote-protection-toggle-switch-toggle" type="checkbox" onchange="emoteProtectionToggleSwitchToggle()">
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
+<!--                        <div class="toggle-switches" id="emote-protection-toggle-switch-div">-->
+<!--                            <h6>Emote protection</h6>-->
+<!--                            <label class="switch" id="emote-protection-toggle-switch-label">-->
+<!--                                <input id="emote-protection-toggle-switch-toggle" type="checkbox" onchange="emoteProtectionToggleSwitchToggle()">-->
+<!--                                <span class="slider round"></span>-->
+<!--                            </label>-->
+<!--                        </div>-->
 
-                        <div class="toggle-switches" id="zagloo-protection-toggle-switch-div">
-                            <h6>Zagloo protection</h6>
-                            <label class="switch" id="zagloo-protection-toggle-switch-label">
-                                <input id="zagloo-protection-toggle-switch-toggle" type="checkbox" onchange="zaglooProtectionToggleSwitchToggle()">
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
-                        <div class="blank-space-above-and-below-toggles"></div>
-                    </div>
-                </div>
+<!--                        <div class="toggle-switches" id="zagloo-protection-toggle-switch-div">-->
+<!--                            <h6>Zagloo protection</h6>-->
+<!--                            <label class="switch" id="zagloo-protection-toggle-switch-label">-->
+<!--                                <input id="zagloo-protection-toggle-switch-toggle" type="checkbox" onchange="zaglooProtectionToggleSwitchToggle()">-->
+<!--                                <span class="slider round"></span>-->
+<!--                            </label>-->
+<!--                        </div>-->
+<!--                        <div class="blank-space-above-and-below-toggles"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
 
-                <br>
+<!--                <br>-->
 
 <!--                Auto shoutout-->
                 <div class="bot-controls-div">
@@ -376,7 +425,7 @@
                             </label>
                         </div>
                         <br>
-                        <button class="showing-new-window-button" onclick="showUserShoutouts">Your Shoutouts</button>
+                        <button class="showing-new-window-button" data-view="shoutouts">Your Shoutouts</button>
                         <div class="blank-space-above-and-below-toggles"></div>
                     </div>
                 </div>
@@ -384,28 +433,7 @@
             </div>
 
         </div>
-        <script>
-            // On page load, collapse all panels
-            document.addEventListener('DOMContentLoaded', function () {
-                const panels = document.querySelectorAll('.toggle-panel');
-                const buttons = document.querySelectorAll('.collapsible-panel');
-                panels.forEach((panel, idx) => {
-                    panel.classList.add('panel-hidden');
-                    buttons[idx].classList.add('collapsed');
-                });
-                buttons.forEach((btn, idx) => {
-                    btn.addEventListener('click', () => {
-                        const panel = btn.nextElementSibling;
-                        if (panel.classList.contains('panel-hidden')) {
-                            panel.classList.remove('panel-hidden');
-                            btn.classList.remove('collapsed');
-                        } else {
-                            panel.classList.add('panel-hidden');
-                            btn.classList.add('collapsed');
-                        }
-                    });
-                });
-            });
-        </script>
+        <script src="/static/niobot.js"></script>
+        <script src="/static/niobot_toggles.js"></script>
     </body>
 </html>
