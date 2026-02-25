@@ -179,7 +179,7 @@ const sound_effects_map = {
     "thankyou": `thankyou${randomNumberPlease(1,2)}`,
     "quiet": "quiet1",
     "shhh": "shhh",
-    "sabaping": "siren",
+    "siren": "siren",
     "yipee": "yipee",
     "boo": "boo",
     "-1": "boo",
@@ -486,4 +486,5 @@ function playSFX(sound) {
             console.log("playback of: ", sound, " located at: ", soundSource, " failed: ", error)
         });
     }
+
 }
