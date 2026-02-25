@@ -129,7 +129,7 @@ const sound_effects = {
     "horn11": "train_horn_bell.mp3",
     "noted1": "notepad.mp3",
     "noted2": "write-that-down.mp3",
-    "murica1": "murica.mp3",
+    "murica1": "merica.mp3",
     "murica anthem": "american-anthem-gun-and-eagle.mp3",
     "2003 corolla": "ElevenLabs_Jerry - Presenter, Announcer, Event_2003 toyota corolla.mp3",
     "7tv": "ElevenLabs_Jerry - Presenter, Announcer, Event_7 T V.mp3",
@@ -485,4 +485,5 @@ function playSFX(sound) {
             console.log("playback of: ", sound, " located at: ", soundSource, " failed: ", error)
         });
     }
+
 }
