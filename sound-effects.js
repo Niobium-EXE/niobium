@@ -310,6 +310,8 @@ const sound_effects_map = {
     "horn": `horn${randomNumberPlease(2,11)}`,
     "noted": "noted1",
     "pepenoted": "noted2",
+    "murica1": "murica1",
+    "murica anthem": "murica anthem",
     "2003toyotacorolla": "2003 corolla",
     "7tv": "7tv",
     "7tvlongestpossibleemoteittakes7daysand14hourstocompletethereisabsolutelynoreasontoaddthis": "7tv",
@@ -487,3 +489,4 @@ function playSFX(sound) {
     }
 
 }
+
