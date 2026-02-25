@@ -91,7 +91,7 @@ const sound_effects = {
     "Wii Wyay": "Wii CrowdWyay.wav",
     "Wii Yay": "Wii CrowdYay.wav",
 
-    "nio huh": "Niobium Huh.wav",
+    "niohuh": "Niobium Huh.wav",
 
     "i dont really care": "I Don't Really Care Margaret.mp3",
     "quiet1": "trump-quiet-quiet.mp3",
@@ -170,7 +170,7 @@ const sound_effects = {
     "typing rage": "typing rage.mp3",
     "nah": "marcus-nah.mp3",
 
-    "pokemon": "pokemon grass spawn.wav",
+    "pokemon": "Pokemon grass spawn.wav",
 
     "morning dove": "morning_dove.wav"
 }
@@ -351,7 +351,6 @@ const sound_effects_map = {
     "chattingfast": "typing rage",
 
     "pokemon": "pokemon",
-    "pikaramen": "pokemon",
 
     "morning dove": "morning dove",
     "morning": "morning dove",
@@ -466,7 +465,7 @@ function playSFX(sound) {
             }
         } else if (sound === "murica") {
             if (Math.random() <= 0.75) {
-                sound = "murica";
+                sound = "murica1";
             }
             else {
                 sound = "murica anthem";
@@ -486,5 +485,4 @@ function playSFX(sound) {
             console.log("playback of: ", sound, " located at: ", soundSource, " failed: ", error)
         });
     }
-
 }
