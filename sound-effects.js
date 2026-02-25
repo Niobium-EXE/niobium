@@ -426,7 +426,7 @@ function playSFX(sound) {
             console.log("playback of: ", sound, " located at: ", soundSource, " failed: ", error)
         });
     }
-    else if (sound === "fart" || sound === "thankyou" || sound === "potion" || sound === "oof" || sound === "goodbye") {
+    else if (sound === "fart" || sound === "thankyou" || sound === "potion" || sound === "oof" || sound === "goodbye" || sound === "murica") {
         if (sound === "fart") {
             let chance = Math.random() * 100;
             if (chance < 1) {
@@ -490,5 +490,6 @@ function playSFX(sound) {
     }
 
 }
+
 
 
