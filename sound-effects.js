@@ -309,10 +309,10 @@ const sound_effects_map = {
     "firetruck": "horn1",
     "horn": `horn${randomNumberPlease(2,11)}`,
     "noted": "noted1",
-    "pepenoted": "noted2",
     "murica":"murica",
     "murica1": "murica1",
     "murica anthem": "murica anthem",
+    "pepenoted": "noted2",
     "2003toyotacorolla": "2003 corolla",
     "7tv": "7tv",
     "7tvlongestpossibleemoteittakes7daysand14hourstocompletethereisabsolutelynoreasontoaddthis": "7tv",
@@ -469,8 +469,7 @@ function playSFX(sound) {
         } else if (sound === "murica") {
             if (Math.random() <= 0.75) {
                 sound = "murica1";
-            }
-            else {
+            } else {
                 sound = "murica anthem";
             }
         }
@@ -488,8 +487,4 @@ function playSFX(sound) {
             console.log("playback of: ", sound, " located at: ", soundSource, " failed: ", error)
         });
     }
-
 }
-
-
-
