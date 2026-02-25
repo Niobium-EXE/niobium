@@ -43,7 +43,7 @@ const sound_effects = {
     "run": "run-vine-sound-effect.mp3",
     "help ive fallen": "help_ive_fallen.wav",
     "eww brother": "eww-brother.mp3",
-    "eww": "eww.mp3",
+    "ewww": "eww.mp3",
     "rubber duck": "rubber duck.wav",
     "hi": "hello_hi_echo.mp3",
     "bye": "discord-leave-noise.mp3",
@@ -129,7 +129,7 @@ const sound_effects = {
     "horn11": "train_horn_bell.mp3",
     "noted1": "notepad.mp3",
     "noted2": "write-that-down.mp3",
-    "murica": "murica.mp3",
+    "murica1": "murica.mp3",
     "murica anthem": "american-anthem-gun-and-eagle.mp3",
     "2003 corolla": "ElevenLabs_Jerry - Presenter, Announcer, Event_2003 toyota corolla.mp3",
     "7tv": "ElevenLabs_Jerry - Presenter, Announcer, Event_7 T V.mp3",
@@ -204,6 +204,7 @@ const sound_effects_map = {
     "+2": "Wii Cheer",
     "oh": "Wii Oh",
     "clap": "Wii SlowClap",
+    "+1": "Wii SlowClap",
     "clappi": "Wii SlowClap",
     "clappies": "Wii SlowClap",
     "1": "Wii SlowClap",
@@ -219,6 +220,7 @@ const sound_effects_map = {
     "pipe": "pipe-low",
     "stinky": "stinky",
     "eww": "eww brother",
+    "ewww": "ewww",
     "good bye": "bye2",
     "boi": "boi",
     "name is jeff": "name is jeff",
@@ -229,14 +231,13 @@ const sound_effects_map = {
     "shield": "shield",
     "news": "news intro",
     "crack": "crack",
+    "peter crack": "peter crack",
     "mission failed": "mission failed",
     "yeet": "yeet",
     "you shall not pass": "you shall not pass",
     "banned": "banned",
     "not that guy": "not that guy",
     "huh": "what1",
-    "waitwhat": "what1",
-    "huhhh": "huh cat",
     "cathuh": "huh cat",
     "what text": "what2",
     "boom": "boom",
@@ -255,17 +256,12 @@ const sound_effects_map = {
     "snore": "snore",
     "bedge": "snore",
     "bedrock": "snore",
-    "stop it get some help)": "stop it get some help",
-    "igsh": "stop it get some help",
+    "sigsh": "stop it get some help",
     "help": "help ive fallen",
     "duck": "rubber duck",
-    "quack": "rubber duck",
-    "rubber duck": "rubber duck",
     "crickets": "crickets",
     "hi": "hi",
     "frfr": "F R F R",
-    "f r f r": "F R F R",
-    "fr fr": "F R F R",
     "long time viewer first time caller": "radio guy thanks caller",
     "first time viewer long time caller": "radio guy thanks caller",
     "long time caller first time viewer": "radio guy thanks caller",
@@ -289,9 +285,9 @@ const sound_effects_map = {
     "connect": "connect",
     "disconnect": "disconnect",
     "notif": "notif",
-    "iohuh": "nio huh",
-    "iobiu2huh": "nio huh",
-    "nihuh": "nio huh",
+    "niohuh": "nio huh",
+    "niobiu2huh": "nio huh",
+    "niohuh": "nio huh",
     "achievement": "achievement",
     "xp": "xp",
     "level up": "level up",
@@ -313,11 +309,7 @@ const sound_effects_map = {
     "firetruck": "horn1",
     "horn": `horn${randomNumberPlease(2,11)}`,
     "noted": "noted1",
-    "mhmnotes": "noted1",
-    "peeponoted": "noted1",
     "pepenoted": "noted2",
-    "notee": "noted2",
-    "pepenotedfast": "noted2",
     "2003toyotacorolla": "2003 corolla",
     "7tv": "7tv",
     "7tvlongestpossibleemoteittakes7daysand14hourstocompletethereisabsolutelynoreasontoaddthis": "7tv",
@@ -326,7 +318,7 @@ const sound_effects_map = {
     "niobiu2aaaa": "AAAA3",
     "diesofr2d2": "AAAA4",
     "acompletelysafewaytooperateasubmarine4000metresunderwater": "controller player",
-    "(actually)": `acktually${randomNumberPlease(1,3)}`,
+    "actually": `acktually${randomNumberPlease(1,3)}`,
     "aktually": `acktually${randomNumberPlease(1,3)}`,
     "adge": "ads",
     "ads": "ads",
@@ -343,7 +335,7 @@ const sound_effects_map = {
     "bb8thumbsup": "bb8 thumbs",
     "beans": `beans${randomNumberPlease(1,3)}`,
     "bible": "and read her bible",
-    "(sniff sniff)": "sniff sniff",
+    "sniff sniff": "sniff sniff",
     "biblethump": "sniff sniff",
     "blubbers": "sniff sniff",
     "bongotap": "bongo taps",
@@ -358,18 +350,18 @@ const sound_effects_map = {
     "chadge": "based",
     "chattingfast": "typing rage",
 
-    "(pokemon)": "pokemon",
-    "(pikaramen)": "pokemon",
+    "pokemon": "pokemon",
+    "pikaramen": "pokemon",
 
-    "(morning dove)": "morning dove",
-    "(morning)": "morning dove",
-    "(mornin)": "morning dove",
-    "(mourning dove)": "morning dove",
-    "(mourning)": "morning dove",
-    "(mournin)": "morning dove",
-    "(dove)": "morning dove",
-    "(🕊️)": "morning dove",
-    "(peace)": "morning dove",
+    "morning dove": "morning dove",
+    "morning": "morning dove",
+    "mornin": "morning dove",
+    "mourning dove": "morning dove",
+    "mourning": "morning dove",
+    "mournin": "morning dove",
+    "dove": "morning dove",
+    "🕊️": "morning dove",
+    "peace": "morning dove",
 }
 
 const tts_sounds = {
@@ -472,14 +464,12 @@ function playSFX(sound) {
             } else {
                 sound = "oof2";
             }
-        } else if (sound === "goodbye") {
-            chance = Math.random() * 100;
-            if (chance < 33.333333) {
-                sound = "goodbye"
-            } else if (chance < 66.6666) {
-                sound = "bye"
-            } else {
-                sound = "bye2"
+        } else if (sound === "murica") {
+            if (Math.random() <= 0.75) {
+                sound = "murica";
+            }
+            else {
+                sound = "murica anthem";
             }
         }
         const soundSource = `SFX/${sound_effects[sound]}`
